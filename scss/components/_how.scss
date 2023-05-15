@@ -1,0 +1,130 @@
+.how {
+    padding: 100px 0;
+    // .how__title
+
+    &__title {
+        margin-bottom: 80px;
+        .title {
+            font-weight: 900;
+            font-size: 44px;
+            line-height: 1.2;
+            color: var(--var-main-color);
+        }
+    }
+
+    // .how__items
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+        align-items: stretch;
+        counter-reset: how;
+    }
+
+    // .how__item
+
+    &__item {
+        box-sizing: border-box;
+        width: calc(50% - 30px);
+        padding: 40px;
+        margin: 0 15px 30px;
+        border: 1px solid #45C1F2;
+        position: relative;
+        &::before {
+            content: '0' counter(how);
+            counter-increment: how;
+            position: absolute;
+            top: 0px;
+            right: 10px;
+            height: 10px;
+            font-size: 70px;
+            line-height: 1;
+            font-weight: 900;
+            color: var(--var-accent-color);
+
+        }
+        .text {
+            h4 {
+                font-weight: 700;
+                font-size: 22px;
+                margin: 0;
+                display: block;
+                margin-bottom: 20px;
+                line-height: 1.2;
+                color: var(--var-main-color);
+            }
+            p {
+                font-size: 18px;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 1.4;
+                display: block;
+                margin: 0;
+                font-variant: var(--var-main-color);
+            }
+        }
+    }
+}
+
+@media(max-width:920px) {
+    .how {
+        padding: 50px 0;
+        &__title {
+            margin-bottom: 50px;
+            .title {
+                font-size: 38px;
+            }
+        }
+        &__item {
+            padding: 40px;
+            &::before {
+                font-size: 50px;
+            }
+            .text {
+                h4 {
+                    font-size: 22px;
+                    margin-bottom: 20px;
+                }
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:768px) {
+    .how {
+        &__title {
+        }
+        &__items {
+            margin: 0;
+        }
+        &__item {
+           width: 100%;
+           margin: 0 0 30px;
+        }
+    }
+}
+
+@media(max-width:560px) {
+    .how {
+        padding: 35px 0;
+        &__title {
+            margin-bottom: 30px;
+            .title {
+                font-size: 24px;
+            }
+        }
+       
+        &__item {
+            &::before {
+                font-size: 20px;
+                top: 10px;
+                right: 10px;
+            }
+            padding: 25px;
+        }
+    }
+}

@@ -24,6 +24,48 @@ document.addEventListener('DOMContentLoaded', ()=>{
 		}
 	})
 
+	const partSlider = new Swiper('.partners__slider', {
+		slidesPerView: 4,
+		spaceBetween: 30,
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+			},
+			560: {
+				slidesPerView: 2,
+				spaceBetween:10,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween:10,
+			},
+			920: {
+				slidesPerView: 4,
+				spaceBetween:30,
+			},
+		},
+	})
+
+	const worksSlider = new Swiper('.works__slider', {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+				spaceBetween: 10,
+
+			},
+			560: {
+				slidesPerView: 2,
+				spaceBetween: 10,
+			},
+			920: {
+				slidesPerView: 3,
+				spaceBetween: 30,
+			},
+		}
+	})
+
 	const prodsSlider = new Swiper('.prods__items', {
 		slidesPerView: 1,
 		breakpoints :{
