@@ -2582,7 +2582,7 @@ body {
   top: 50%;
   width: 90px;
   height: 90px;
-  background-image: url(/assets/imgs/icons/play.svg);
+  background-image: url(assets/imgs/icons/play.svg);
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-transform: translate(-50%, -50%);
