@@ -1,0 +1,118 @@
+.edge {
+    padding: 70px 0;
+    box-sizing: border-box;
+    // .edge__body
+
+    &__body {
+        display: flex;
+        align-items: center;
+    }
+
+    // .edge__item
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        width: 33.33%;
+        border-right: 1px solid #dddcdc;
+        padding: 0 15px;
+        &:first-child {
+            align-items: flex-start;
+            padding-left: 0;
+        }
+        &:last-child {
+            border-right: none;
+            align-items: flex-end;
+            padding-right: 0;
+        }
+        p {
+            color: #fff;
+            text-shadow: rgb(69, 193, 242) 1px 0px 0px, rgb(69, 193, 242) 0.540302px 0.841471px 0px, rgb(69, 193, 242) -0.416147px 0.909297px 0px, rgb(69, 193, 242) -0.989992px 0.14112px 0px, rgb(69, 193, 242) -0.653644px -0.756802px 0px, rgb(69, 193, 242) 0.283662px -0.958924px 0px, rgb(69, 193, 242) 0.96017px -0.279415px 0px;
+            margin: 0;
+            font-size: 100px;
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: 0.15;
+            margin-bottom: 30px;
+            span {
+                font-size: 50px;
+                display: inline-block;
+            }
+        }
+        >span {
+            display: block;
+            font-size: 16px;
+            color: var(--var-main-color);
+            opacity: .75;
+            font-weight: 400;
+        }
+    }
+}
+
+@media(max-width:1200px) {
+    .edge {
+        padding: 50px 0;
+        &__item {
+            p {
+                font-size: 80px;
+                margin-bottom: 20px;
+                span {
+                    font-size: 40px;
+                }
+            }
+            >span {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media(max-width:1024px) {
+    .edge{
+        &__item {
+            p {
+                font-size: 74px;
+                span {
+                    font-size: 36ox;
+                }
+            }
+            >span {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+
+@media(max-width:920px) {
+    .edge{
+        &__item {
+            width: 25%;
+            border-right: none;
+            &:last-child {
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media(max-width:768px) {
+    .edge{
+        &__body {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__item {
+            width: 100% !important;
+            align-items: flex-start !important;
+            padding: 0;
+            margin-bottom: 45px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
