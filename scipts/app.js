@@ -4,6 +4,26 @@ document.addEventListener('DOMContentLoaded', ()=>{
         // options
     })
 
+	const reviewSlider = new Swiper('.review__slider', {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		breakpoints: {
+			0: {
+				slidesPerView: 1,
+				spaceBetween: 10,
+
+			},
+			560: {
+				slidesPerView: 2,
+				spaceBetween: 10,
+			},
+			920: {
+				slidesPerView: 3,
+				spaceBetween: 30,
+			},
+		}
+	})
+
 	const prodsSlider = new Swiper('.prods__items', {
 		slidesPerView: 1,
 		breakpoints :{
