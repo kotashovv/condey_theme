@@ -139,3 +139,84 @@ body {
         display: block;
     }
 }
+
+
+.breaker {
+    padding: 20px 0 100px;
+    box-sizing: border-box;
+    // .breaker__wrap
+
+    &__wrap {
+        display: flex;
+        box-sizing: border-box;
+        padding: 60px;
+        align-items: center;
+        justify-content: space-between;
+        background-image: url(assets/imgs/breaker.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        .text {
+            margin-right: 30px;
+            p {
+                font-size: 28px;
+                margin: 0;
+                display: block;
+                line-height: 1.5;
+                color: #fff;
+            }
+        }
+        .action {
+            width: 100%;
+            max-width: 295px;
+            .main-btn {
+                width: 100%;
+                max-width: 295px;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+        }
+    }
+}
+
+@media(max-width:1024px) {
+    .breaker {
+        padding: 25px 0 100px;
+        &__wrap {
+            flex-direction: column;
+            padding: 50px;
+            .text {
+                width: 100%;
+                max-width: 510px;
+                margin: 0;
+                margin-bottom: 35px;
+                p {
+                    text-align: center;
+                    font-size: 28px;
+                }
+            }
+            .action {
+
+            }
+        }
+    }
+}
+@media(max-width:560px) {
+    .breaker {
+        padding: 15px 0 70px;
+        &__wrap {
+            padding: 40px 15px ;
+            .text {
+                margin-bottom: 40px;
+                p {
+                    font-size: 20px;
+                }
+            }
+            .action {
+                .main-btn {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

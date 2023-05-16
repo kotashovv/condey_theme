@@ -1,5 +1,39 @@
 document.addEventListener('DOMContentLoaded', ()=>{
 
+
+	const faqItems = document.querySelectorAll('.accord-btn');
+
+	if (faqItems.length != 0) {
+		faqItems.forEach(function(item){
+			item.addEventListener('click', (e)=>{
+				let target = e.target;
+				if (target.classList.contains('active')) {
+					CloseFaq(target);
+				} else {
+					OpenFaq(target);
+				}
+			})
+		})
+
+
+		function OpenFaq(i) {
+			faqItems.forEach(function(item){
+				item.classList.remove('active');
+				item.nextElementSibling.classList.remove('active');
+			});
+			i.classList.add('active');
+			i.nextElementSibling.classList.add('active');
+		}
+		function CloseFaq(i) {
+			faqItems.forEach(function(item){
+				item.classList.remove('active');
+				item.nextElementSibling.classList.remove('active');
+			});
+			i.classList.remove('active');
+			i.nextElementSibling.classList.remove('active');
+		}
+	}
+
     const mainSlider = new Swiper('.hero__slider', {
         // options
     })
