@@ -168,6 +168,12 @@
         <!-- главный баннер -->
         <section class="hero">
           <div class="hero__slider swiper">
+            <div class="swiper-navigation hero-navigation">
+              <button class="hero-prev swiper-button-prev"><img src="assets/imgs/icons/Vector.svg" alt=""></button>
+              <button class="hero-next swiper-button-next"><img src="assets/imgs/icons/Vector.svg" alt=""></button>
+            </div>
+            <div class="swiper-pagination hero-pagination">
+            </div>
             <div class="hero__wrapper-slider swiper-wrapper">
               <article
                 style="background-image: url(assets/imgs/hero-back.png)"
@@ -340,47 +346,58 @@
 
         <!-- сертификаты -->
         <section class="certification">
-            <div class="container">
-                <div class="certification__title">
+            <div class="container big-container">
+                <div class="certification__title alt-title">
                     <h3>
                         Наши сертификаты 
                     </h3>
                 </div>
-                <div class="certification__slider swiper">
-                    <div class="certification__slider-wrapper swiper-wrapper">
-                        <article class="certification__slider-slide swiper-slide">
-                            <img src="assets/imgs/cer1.png" alt="">
-                        </article>
-                        <article class="certification__slider-slide swiper-slide">
-                            <img src="assets/imgs/cer1.png" alt="">
-                        </article>
-                        <article class="certification__slider-slide swiper-slide">
-                            <img src="assets/imgs/cer1.png" alt="">
-                        </article>
-                        <article class="certification__slider-slide swiper-slide">
-                            <img src="assets/imgs/cer1.png" alt="">
-                        </article>
-                        <article class="certification__slider-slide swiper-slide">
-                            <img src="assets/imgs/cer1.png" alt="">
-                        </article>
-                        <article class="certification__slider-slide swiper-slide">
-                            <img src="assets/imgs/cer1.png" alt="">
-                        </article>
-                    </div>
+                <div class="certification__wrap">
+                  <div class="cert-nav navigation">
+                    <button class="prev-slide"><img src="assets/imgs/icons/vector-black.svg" alt=""></button>
+                    <button class="next-slide"><img src="assets/imgs/icons/vector-black.svg" alt=""></button>
+                  </div>
+                  <div class="certification__slider swiper">
+                      <div class="swiper-pagination cert-pagination">
+                      </div>
+                      <div class="certification__slider-wrapper swiper-wrapper">
+                          <article class="certification__slider-slide swiper-slide">
+                              <img src="assets/imgs/cer1.png" alt="">
+                          </article>
+                          <article class="certification__slider-slide swiper-slide">
+                              <img src="assets/imgs/cer1.png" alt="">
+                          </article>
+                          <article class="certification__slider-slide swiper-slide">
+                              <img src="assets/imgs/cer1.png" alt="">
+                          </article>
+                          <article class="certification__slider-slide swiper-slide">
+                              <img src="assets/imgs/cer1.png" alt="">
+                          </article>
+                          <article class="certification__slider-slide swiper-slide">
+                              <img src="assets/imgs/cer1.png" alt="">
+                          </article>
+                          <article class="certification__slider-slide swiper-slide">
+                              <img src="assets/imgs/cer1.png" alt="">
+                          </article>
+                          <article class="certification__slider-slide swiper-slide">
+                              <img src="assets/imgs/cer1.png" alt="">
+                          </article>
+                      </div>
+                  </div>
                 </div>
             </div>
         </section>
         <!-- сертификаты -->
 
         <!-- тип продукции 1 -->
-        <section class="prods">
+        <section class="prods prods__items-one-wrap">
           <div class="container">
             <div class="prods__title section-title">
                 <h3 class="title">
                   Типы вентиляции
                 </h3>
             </div>
-            <div class="prods__items swiper">
+            <div class="prods__items swiper prods__items-one">
               <div class="prods__item-wrapper swiper-wrapper">
                 <a style="background-image: url(assets/imgs/item-img.png);" href="#" class="prods__item swiper-slide">
                   <span class="prods__num">01</span>
@@ -405,13 +422,19 @@
                 </a>
               </div>
             </div>
+            <div class="section-nav">
+              <button class="prods-prev btn-prev"><img src="assets/imgs/icons/vector-black.svg" alt=""></button>
+              <div class="prods__pag pagination">
+              </div>
+              <button class="prods-next btn-next"><img src="assets/imgs/icons/vector-black.svg" alt=""></button>
+            </div>
           </div>
         </section>
         <!-- тип продукции 1 -->
 
 
         <!-- тип продукции 2 -->
-        <section class="prods">
+        <section class="prods prods__items-two-wrap">
           <div class="container">
             <div class="prods__title section-title">
                 <h3 class="title">
@@ -419,7 +442,7 @@
                   вентиляция
                 </h3>
             </div>
-            <div class="prods__items swiper">
+            <div class="prods__items swiper prods__items-two">
               <div class="prods__wrapper swiper-wrapper">
                 <a href="#" style="background-image: url(assets/imgs/item4.png);" class="prods__item swiper-slide">
                   <span class="prods__num">01</span>
@@ -444,6 +467,12 @@
                   </p>
                 </a>
               </div>
+            </div>
+            <div class="section-nav">
+              <button class="prods-prev btn-prev"><img src="assets/imgs/icons/vector-black.svg" alt=""></button>
+              <div class="prods__pag pagination">
+              </div>
+              <button class="prods-next btn-next"><img src="assets/imgs/icons/vector-black.svg" alt=""></button>
             </div>
           </div>
         </section>
@@ -665,29 +694,38 @@
 
           <!-- отзывы старт -->
           <section class="review">
-            <div class="container">
-              <div class="review__title section-title">
+            <div class="container big-container">
+              <div class="review__title section-title alt-title">
                 <h2 class="title">
                   Отзывы
                 </h2>
               </div>
-              <div class="review__slider swiper">
-                <div class="review__slider-wrapper swiper-wrapper">
-                  <a class="review__slider-slide swiper-slide" href="#">
-                    <img src="assets/imgs/v1.png" alt="">
-                  </a>
-                  <a class="review__slider-slide swiper-slide" href="#">
-                    <img src="assets/imgs/v1.png" alt="">
-                  </a>
-                  <a class="review__slider-slide swiper-slide" href="#">
-                    <img src="assets/imgs/v1.png" alt="">
-                  </a>
-                  <a class="review__slider-slide swiper-slide" href="#">
-                    <img src="assets/imgs/v1.png" alt="">
-                  </a>
-                  <a class="review__slider-slide swiper-slide" href="#">
-                    <img src="assets/imgs/v1.png" alt="">
-                  </a>
+              <div class="review__wrap">
+                <div class="swiper-pagination review-pagination standart-pagination">
+                </div>
+                <div class="review__slider swiper">
+                  
+                  <div class="review__slider-wrapper swiper-wrapper">
+                    <a class="review__slider-slide swiper-slide" href="#">
+                      <img src="assets/imgs/v1.png" alt="">
+                    </a>
+                    <a class="review__slider-slide swiper-slide" href="#">
+                      <img src="assets/imgs/v1.png" alt="">
+                    </a>
+                    <a class="review__slider-slide swiper-slide" href="#">
+                      <img src="assets/imgs/v1.png" alt="">
+                    </a>
+                    <a class="review__slider-slide swiper-slide" href="#">
+                      <img src="assets/imgs/v1.png" alt="">
+                    </a>
+                    <a class="review__slider-slide swiper-slide" href="#">
+                      <img src="assets/imgs/v1.png" alt="">
+                    </a>
+                  </div>
+                </div>
+                <div class="review-nav standart-nav-slider">
+                  <button class="prev-slide"><img src="assets/imgs/icons/vector-black.svg" alt=""></button>
+                  <button class="next-slide"><img src="assets/imgs/icons/vector-black.svg" alt=""></button>
                 </div>
               </div>
             </div>
@@ -697,49 +735,57 @@
           <!-- наши работы старт -->
 
           <section class="works">
-            <div class="container">
+            <div class="container big-container">
               <div class="works__title section-title">
-                <h2 class="title">
+                <h2 class="title alt-title">
                   Наши работы
                 </h2>
               </div>
-              <div class="works__slider swiper">
-                <div class="works__slider-wrapper swiper-wrapper">
-                  <a style="background-image: url(assets/imgs/wo1.png);" class="works__slider-slide swiper-slide" href="#">
-                    <div class="name">
-                      <span>
-                        ЖК ВТБ Арена Парк
-                      </span>
-                    </div>
-                  </a>
-                  <a style="background-image: url(assets/imgs/wo2.png);" class="works__slider-slide swiper-slide" href="#">
-                    <div class="name">
-                      <span>
-                        ЖК Зиларт
-                      </span>
-                    </div>
-                  </a>
-                  <a style="background-image: url(assets/imgs/wo3.png);" class="works__slider-slide swiper-slide" href="#">
-                    <div class="name">
-                      <span>
-                        Королев
-                      </span>
-                    </div>
-                  </a>
-                  <a style="background-image: url(assets/imgs/wo2.png);" class="works__slider-slide swiper-slide" href="#">
-                    <div class="name">
-                      <span>
-                        Королев
-                      </span>
-                    </div>
-                  </a>
-                  <a style="background-image: url(assets/imgs/wo1.png);" class="works__slider-slide swiper-slide" href="#">
-                    <div class="name">
-                      <span>
-                        Королев
-                      </span>
-                    </div>
-                  </a>
+              <div class="works__wrap">
+                <div class="works-nav standart-nav-slider">
+                  <button class="prev-slide"><img src="assets/imgs/icons/vector-black.svg" alt=""></button>
+                  <button class="next-slide"><img src="assets/imgs/icons/vector-black.svg" alt=""></button>
+                </div>
+                <div class="swiper-pagination works-pagination standart-pagination">
+                </div>
+                <div class="works__slider swiper">
+                  <div class="works__slider-wrapper swiper-wrapper">
+                    <a style="background-image: url(assets/imgs/wo1.png);" class="works__slider-slide swiper-slide" href="#">
+                      <div class="name">
+                        <span>
+                          ЖК ВТБ Арена Парк
+                        </span>
+                      </div>
+                    </a>
+                    <a style="background-image: url(assets/imgs/wo2.png);" class="works__slider-slide swiper-slide" href="#">
+                      <div class="name">
+                        <span>
+                          ЖК Зиларт
+                        </span>
+                      </div>
+                    </a>
+                    <a style="background-image: url(assets/imgs/wo3.png);" class="works__slider-slide swiper-slide" href="#">
+                      <div class="name">
+                        <span>
+                          Королев
+                        </span>
+                      </div>
+                    </a>
+                    <a style="background-image: url(assets/imgs/wo2.png);" class="works__slider-slide swiper-slide" href="#">
+                      <div class="name">
+                        <span>
+                          Королев
+                        </span>
+                      </div>
+                    </a>
+                    <a style="background-image: url(assets/imgs/wo1.png);" class="works__slider-slide swiper-slide" href="#">
+                      <div class="name">
+                        <span>
+                          Королев
+                        </span>
+                      </div>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -749,35 +795,43 @@
 
           <!-- блок партнеты старт -->
         <section class="partners">
-          <div class="container">
-            <div class="partners__title section-title">
+          <div class="container big-container">
+            <div class="partners__title section-title alt-title">
               <h2 class="title">
                 Партнёры
               </h2>
             </div>
-            <div class="partners__slider swiper">
-              <div class="partners__slider-wrapper swiper-wrapper">
-                <article class="partners__slider-slide swiper-slide">
-                  <img src="assets/imgs/p1.png" alt="">
-                </article>
-                <article class="partners__slider-slide  swiper-slide">
-                  <img src="assets/imgs/p2.png" alt="">
-                </article>
-                <article class="partners__slider-slide  swiper-slide">
-                  <img src="assets/imgs/p3.png" alt="">
-                </article>
-                <article class="partners__slider-slide  swiper-slide">
-                  <img src="assets/imgs/p4.png" alt="">
-                </article>
-                <article class="partners__slider-slide  swiper-slide">
-                  <img src="assets/imgs/p2.png" alt="">
-                </article>
-                <article class="partners__slider-slide  swiper-slide">
-                  <img src="assets/imgs/p3.png" alt="">
-                </article>
-                <article class="partners__slider-slide  swiper-slide">
-                  <img src="assets/imgs/p4.png" alt="">
-                </article>
+            <div class="partners__wrap">
+              <div class="part-nav standart-nav-slider">
+                <button class="prev-slide"><img src="assets/imgs/icons/vector-black.svg" alt=""></button>
+                <button class="next-slide"><img src="assets/imgs/icons/vector-black.svg" alt=""></button>
+              </div>
+              <div class="swiper-pagination part-pagination standart-pagination">
+              </div>
+              <div class="partners__slider swiper">
+                <div class="partners__slider-wrapper swiper-wrapper">
+                  <article class="partners__slider-slide swiper-slide">
+                    <img src="assets/imgs/p1.png" alt="">
+                  </article>
+                  <article class="partners__slider-slide  swiper-slide">
+                    <img src="assets/imgs/p2.png" alt="">
+                  </article>
+                  <article class="partners__slider-slide  swiper-slide">
+                    <img src="assets/imgs/p3.png" alt="">
+                  </article>
+                  <article class="partners__slider-slide  swiper-slide">
+                    <img src="assets/imgs/p4.png" alt="">
+                  </article>
+                  <article class="partners__slider-slide  swiper-slide">
+                    <img src="assets/imgs/p2.png" alt="">
+                  </article>
+                  <article class="partners__slider-slide  swiper-slide">
+                    <img src="assets/imgs/p3.png" alt="">
+                  </article>
+                  <article class="partners__slider-slide  swiper-slide">
+                    <img src="assets/imgs/p4.png" alt="">
+                  </article>
+                </div>
               </div>
             </div>
           </div>

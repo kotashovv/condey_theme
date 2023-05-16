@@ -36,11 +36,30 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     const mainSlider = new Swiper('.hero__slider', {
         // options
+		pagination: {
+			el: '.hero-pagination',
+			renderBullet: function (index, className) {
+				return '<span class="' + className + '">' + '0' + (index + 1) + "</span>";
+			  },
+			  clickable: true,
+		},
+		navigation: {
+			nextEl: '.hero-next',
+			prevEl: '.hero-prev',
+		}
+		
     })
 
 	const reviewSlider = new Swiper('.review__slider', {
 		slidesPerView: 3,
 		spaceBetween: 30,
+		navigation: {
+			prevEl : '.review-nav .prev-slide',
+			nextEl : '.review-nav .next-slide',
+		},
+		pagination: {
+			el: '.review-pagination',
+		},
 		breakpoints: {
 			0: {
 				slidesPerView: 1,
@@ -59,6 +78,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
 	})
 
 	const partSlider = new Swiper('.partners__slider', {
+		navigation: {
+			prevEl : '.part-nav .prev-slide',
+			nextEl : '.part-nav .next-slide',
+		},
+		pagination: {
+			el: '.part-pagination',
+		},
 		slidesPerView: 4,
 		spaceBetween: 30,
 		breakpoints: {
@@ -83,6 +109,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
 	const worksSlider = new Swiper('.works__slider', {
 		slidesPerView: 3,
 		spaceBetween: 30,
+		navigation: {
+			prevEl : '.works-nav .prev-slide',
+			nextEl : '.works-nav .next-slide',
+		},
+		pagination: {
+			el: '.works-pagination',
+		},
+
 		breakpoints: {
 			0: {
 				slidesPerView: 1,
@@ -100,7 +134,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
 		}
 	})
 
-	const prodsSlider = new Swiper('.prods__items', {
+	const prodsSlider = new Swiper('.prods__items-one', {
+		pagination: {
+			el: '.prods__items-one-wrap .prods__pag'
+		},
+		navigation: {
+			prevEl: 'prods__items-one-wrap .prods-prev',
+			nextEl: 'prods__items-one-wrap .prods-next',
+		},
 		slidesPerView: 1,
 		breakpoints :{
 			0: {
@@ -120,9 +161,45 @@ document.addEventListener('DOMContentLoaded', ()=>{
 				spaceBetween: 30,
 			}
 		},
-	})
+	});
+
+	const prodsTwoSlider = new Swiper('.prods__items-two', {
+		pagination: {
+			el: '.prods__items-two-wrap .prods__pag'
+		},
+		navigation: {
+			prevEl: '.prods__items-two-wrap .prods-prev',
+			nextEl: '.prods__items-two-wrap .prods-next',
+		},
+		slidesPerView: 1,
+		breakpoints :{
+			0: {
+				slidesPerView: 1,
+				spaceBetween: 10,
+			},
+			450: {
+				slidesPerView: 2,
+				spaceBetween: 10,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 10,
+			},
+			1024: {
+				slidesPerView: 3,
+				spaceBetween: 30,
+			}
+		},
+	});
 
     const certSlider = new Swiper('.certification__slider', {
+		navigation: {
+			prevEl: '.cert-nav .prev-slide',
+			nextEl: '.cert-nav .next-slide',
+		},
+		pagination: {
+			el: '.cert-pagination'
+		},
         spaceBetween: 10,
         breakpoints:{
             0: {
