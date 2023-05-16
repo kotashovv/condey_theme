@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     const mainSlider = new Swiper('.hero__slider', {
         // options
+		effect: 'fade',
 		pagination: {
 			el: '.hero-pagination',
 			renderBullet: function (index, className) {

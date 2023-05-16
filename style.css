@@ -2515,6 +2515,11 @@ body {
   opacity: .35;
 }
 
+.feedback__form form label.form-input input:focus {
+  border-color: var(--var-accent-color);
+  outline: none;
+}
+
 .feedback__form form .button {
   display: block;
   width: 100%;

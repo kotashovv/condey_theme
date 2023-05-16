@@ -123,6 +123,10 @@
                         &::placeholder {
                             opacity: .35;
                         }
+                        &:focus {
+                            border-color: var(--var-accent-color);
+                            outline: none;
+                        }
                     }
                 }
             }
