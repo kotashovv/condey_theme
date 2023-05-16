@@ -1,0 +1,123 @@
+.guarante {
+    padding: 180px 0 100px;
+    box-sizing: border-box;
+    position: relative;
+    // .guarante__text
+
+    &__text {
+        width: 50%;
+        max-width: 620px;
+        box-sizing: border-box;
+        .text {
+            p {
+                font-size: 18px;
+                font-weight: 400;
+                margin: 0;
+                line-height: 1.4;
+                color: var(--var-main-color);
+            }
+        }
+    }
+    &__title {
+        margin-bottom: 70px;
+        h2 {
+            display: block;
+            margin: 0;
+            font-size: 44px;
+            line-height: 1.3;
+            color: var(--var-main-color);
+            font-weight: 900;
+        }
+    }
+
+    .num {
+        position: absolute;
+        top: 180px;
+        height: calc(100% - 180px - 100px);
+        background-image: url(assets/imgs/g1.png);
+        background-repeat: no-repeat;
+        background-position: left top;
+        width: 50%;
+        z-index: -1;
+        right: 0;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        span {
+            font-size: 140px;
+            font-weight: 1000;
+            line-height: 1;
+            text-transform: uppercase;
+            margin-bottom: -20px;
+            color: #fff;
+            letter-spacing: 0.1em;
+        }
+    }
+}
+
+@media(max-width:1440px) {
+    .guarante {
+        .num {
+            span {
+                font-size: 100px;
+            }
+        }
+    }
+}
+
+@media(max-width:1200px) {
+    .guarante {
+        padding: 100px 0 50px;
+        .num {
+            height: calc(100% - 150px);
+            width: 25%;
+            min-width: 260px;
+            top: 100px;
+            justify-content: flex-end;
+            span {
+                font-size: 40px;
+                margin-bottom: -5px;
+            }
+        }
+        &__title {
+            margin-bottom: 40px;
+            .title {
+                font-size: 38px;
+            }
+        }
+        &__text {
+            width: 65%;
+            max-width: none;
+
+        }
+    }
+}
+
+@media(max-width:768px) {
+    .guarante {
+        padding: 70px 0 35px;
+        .num {
+            position: static;
+            display: flex;
+            
+            min-width: none;
+            width: 100%;
+            max-width: none;
+            height: 170px;
+            background-image: url(assets/imgs/mobile-g.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            justify-content: center;
+            margin-bottom: 40px;
+            span {
+                font-size: 50px;
+            }
+        }
+        &__text {
+            width: 100%;
+            max-width: none;
+            margin: 0;
+        }
+    }
+}
