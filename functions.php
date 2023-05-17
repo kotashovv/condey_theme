@@ -10,3 +10,5 @@ function theme_name_scripts() {
     wp_enqueue_script( 'swiper-js', get_template_directory_uri() . '/assets/libs/swiper-bundle.min.js', array(), '1', true );
 	wp_enqueue_script( 'app-js', get_template_directory_uri() . '/scripts/app.js', array('swiper-js'), $siteVer , true );
 }
+
+add_theme_support( 'menus' );
