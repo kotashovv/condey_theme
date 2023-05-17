@@ -3,6 +3,18 @@
     box-sizing: border-box;
     position: relative;
     // .guarante__text
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 215px;
+        width: 8%;
+        height: 1px;
+        background-color: var(--var-accent-color);
+        @media(max-width:1600px) {
+            display: none;
+        }
+    }
 
     &__text {
         width: 50%;

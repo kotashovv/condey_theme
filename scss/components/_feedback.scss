@@ -1,6 +1,19 @@
 .feedback {
     box-sizing: border-box;
     padding: 200px 0;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 230px;
+        width: 8%;
+        height: 1px;
+        background-color: var(--var-accent-color);
+        @media(max-width:1600px) {
+            display: none;
+        }
+    }
     // .feedback__title
 
     &__title {

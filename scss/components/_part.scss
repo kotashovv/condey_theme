@@ -1,6 +1,19 @@
 .partners {
     padding: 100px 0;
     box-sizing: border-box;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 135px;
+        width: 8%;
+        height: 1px;
+        background-color: var(--var-accent-color);
+        @media(max-width:1600px) {
+            display: none;
+        }
+    }
     // .partners__title
 
     &__title {

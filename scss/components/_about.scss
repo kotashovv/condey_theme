@@ -1,5 +1,18 @@
 .about {
     padding: 160px 0 45px;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 190px;
+        width: 8%;
+        height: 1px;
+        background-color: var(--var-accent-color);
+        @media(max-width:1600px) {
+            display: none;
+        }
+    }
     .container {
         max-width: 1470px;
     }

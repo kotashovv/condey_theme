@@ -1,5 +1,89 @@
 document.addEventListener('DOMContentLoaded', ()=>{
 
+	const withSublist = document.querySelectorAll('.with-sublist');
+	if (withSublist.length != 0) {
+		const sublists = document.querySelectorAll('.sublist-menu');
+		withSublist.forEach(function(item){
+			item.addEventListener('mouseover', ()=>{
+				item.querySelector('ul.sublist-menu').classList.add('active');
+			})
+		})
+		sublists.forEach(function(item){
+			item.addEventListener('mouseout', ()=>{
+				item.classList.remove('active');
+			})
+		})
+	}
+
+	const ClosePopupBtn = document.querySelectorAll('.close-popup');
+	if(ClosePopupBtn.length != 0) {
+		ClosePopupBtn.forEach(function(item){
+			item.addEventListener('click',()=>{
+				ClosePopup();
+			})
+		})
+	}
+
+	const PopupWindow = document.querySelector('.popup');
+	const callPopupBtns = document.querySelectorAll('button[data-popup]');
+
+	function OpenPopup(item) {
+		CloseMenu();
+		let currentPopup = document.querySelector(item);
+		PopupWindow.classList.add('active');
+		currentPopup.classList.add('active');
+		document.body.style.overflow = 'hidden';
+		document.addEventListener('click', (e)=>{
+			if (!e.target.closest('.popup__item') && !e.target.closest('[data-popup]')) {
+				ClosePopup();
+			}
+		})
+	}
+	function ClosePopup() {
+		PopupWindow.classList.remove('active');
+		let allPopupItems = document.querySelectorAll('.popup__item');
+		allPopupItems.forEach((i)=>{
+			i.classList.remove('active');
+		})
+		document.body.style.overflow = 'auto';
+	}
+
+	if (callPopupBtns.length != 0) {
+		callPopupBtns.forEach(function(item){
+			item.addEventListener('click', (e)=>{
+				e.preventDefault();
+				let currentPopup = e.target.getAttribute('data-popup');
+				OpenPopup(currentPopup);
+			})
+		})
+		
+	}
+
+	const burgerBtn = document.querySelector('.burger-btn');
+	const mobileMenu = document.querySelector('.header__mobile');
+	function OpenMenu() {
+		burgerBtn.classList.add('active');
+		mobileMenu.classList.add('active');
+		document.body.style.overflow = 'hidden';
+	}
+	function CloseMenu() {
+		burgerBtn.classList.remove('active');
+		mobileMenu.classList.remove('active');
+		document.body.style.overflow = 'auto';
+	}
+	if (burgerBtn) {
+		burgerBtn.addEventListener('click', (e)=>{
+			if (e.target.classList.contains('active')) {
+				CloseMenu();
+			} else {
+				OpenMenu();
+				
+			}
+		});
+		
+		
+
+	}
 
 	const faqItems = document.querySelectorAll('.accord-btn');
 
@@ -36,7 +120,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     const mainSlider = new Swiper('.hero__slider', {
         // options
-		effect: 'fade',
 		pagination: {
 			el: '.hero-pagination',
 			renderBullet: function (index, className) {
