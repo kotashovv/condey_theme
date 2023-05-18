@@ -1,5 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+		const header = document.querySelector('header');
+
+		function handleScroll() {
+		// if (window.pageYOffset > header.scrollHeight - document.querySelector('.header__bottom').scrollHeight) {
+		if (window.pageYOffset > 250) {
+			document.querySelector('.header__bottom').classList.add('vission');
+			header.style.marginBottom = document.querySelector('.header__bottom').scrollHeight + 'px';
+		} else {
+			document.querySelector('.header__bottom').classList.remove('vission');
+			header.style.marginBottom = 0;
+		}
+		}
+
+		window.addEventListener('scroll', handleScroll);
+
+
 	function NoticeForm(text) {
 		const notice = document.querySelector('.notice');
 		notice.innerText = text;
@@ -9,83 +25,56 @@ document.addEventListener('DOMContentLoaded', () => {
 		}, 2500);
 	}
 
-	var form = document.querySelectorAll(".contact-form-name");
+	var forms = document.querySelectorAll(".contact-form-name");
 
-	if (form.length != 0) {
-		form.forEach(function(form) {
+	if (forms.length != 0) {
+		forms.forEach(function (form) {
 			form.addEventListener("submit", function (event) {
 				event.preventDefault(); // Отмена отправки формы по умолчанию
-				if (form.classList.contains('main-form')) {
-					form.classList.add("waiting");
-		
-					var formData = new FormData(form);
-			
-					fetch(form.action, {
-							method: form.method,
-							body: formData
-						})
-						.then(function (response) {
-							// Удаление класса "waiting" из формы
-							form.classList.remove("waiting");
-			
-							if (response.ok) {
-								// Успешная отправка формы
-								NoticeForm('Заявка успешно отправлена!')
-								form.reset();
-							} else {
-								// Ошибка отправки формы
-								NoticeForm("Возникла ошибка, попробуйте связаться иначе :(");
-							}
-						})
-						.catch(function (error) {
-							// Ошибка отправки формы
-							console.log("При отправке заявки произошла ошибка.");
-							console.error(error);
-			
-							// Удаление класса "waiting" из формы (в случае ошибки)
-							form.classList.remove("waiting");
-						});
-				} else if (form.classList.contains('small-form')) {
-					form.classList.add("waiting");
-		
-					var formData = new FormData(form);
-			
-					fetch(form.action, {
-							method: form.method,
-							body: formData
-						})
-						.then(function (response) {
-							// Удаление класса "waiting" из формы
-							form.classList.remove("waiting");
-			
-							if (response.ok) {
-								// Успешная отправка формы
+				form.classList.add("waiting");
+
+				var formData = new FormData(form);
+
+				fetch('../wp-content/themes/condey_theme/form-handler.php', {
+						method: form.method,
+						body: formData
+					})
+					.then(function (response) {
+						// Удаление класса "waiting" из формы
+						form.classList.remove("waiting");
+
+						if (response.ok) {
+							// Успешная отправка формы
+
+							if (form.classList.contains('small-form')) {
 								let noticeWindow = form.closest('.popup__item').querySelector('.popup-notice');
 								noticeWindow.classList.add('active');
 								setTimeout(() => {
 									noticeWindow.classList.remove('active');
 								}, 2500);
-								form.reset();
 							} else {
-								// Ошибка отправки формы
-								NoticeForm("Возникла ошибка, попробуйте связаться иначе :(");
+								NoticeForm('Заявка успешно отправлена!')
 							}
-						})
-						.catch(function (error) {
+							form.reset();
+
+						} else {
 							// Ошибка отправки формы
-							console.log("При отправке заявки произошла ошибка.");
-							console.error(error);
-			
-							// Удаление класса "waiting" из формы (в случае ошибки)
-							form.classList.remove("waiting");
-						});
-				}
-				
+							NoticeForm("Возникла ошибка, попробуйте связаться иначе :(");
+						}
+					})
+					.catch(function (error) {
+						// Ошибка отправки формы
+						console.log("При отправке заявки произошла ошибка.");
+						console.error(error);
+
+						// Удаление класса "waiting" из формы (в случае ошибки)
+						form.classList.remove("waiting");
+					});
 			});
 		})
 	}
 
-	
+
 
 	var inputFile = document.getElementById('fileInput');
 

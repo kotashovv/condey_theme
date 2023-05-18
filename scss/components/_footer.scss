@@ -67,6 +67,10 @@
                 img {
                     max-width: 100%;
                 }
+                transition: .35s ease;
+                &:hover {
+                    filter: brightness(.5);
+                }
             }
             margin-bottom: 40px;
         }

@@ -151,6 +151,7 @@
                 }
             }
             label {
+                
                 &.file-add {
                     position: relative;
                     p {
@@ -168,6 +169,11 @@
                         position: absolute;
                         opacity: 0;
                         width: 100%;
+                    }
+                    &:hover {
+                        p {
+                            color: var(--var-accent-color);
+                        }
                     }
                 }
                 &.form-input {

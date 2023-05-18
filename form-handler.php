@@ -1,21 +1,17 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-  // Почта
-  $admin_email = 'kotashov03@gmail.com';
-  $admin_name = 'Новая заявка с Кандеич';
-
+  
   // Получение данных из формы
   $phone = $_POST["user-phone"];
   $comment = $_POST["quest"];
   $needs = isset($_POST["need"]) ? implode(", ", (array)$_POST["need"]) : "";
   
   // Параметры отправки письма
-  $to = $admin_email;
-  $subject = $admin_name;
+  $to = "info@kandeich.ru";
+  $subject = "Новая заявка с формы";
   $message = "Телефон: " . $phone . "\n\n";
   $message .= "Комментарий: " . $comment . "\n\n";
-  $message .= "Необходимо: " . $needs . "\n\n";
+  $message .= "Потребности: " . $needs . "\n\n";
   
   // Создание уникального границы для разделения данных
   $boundary = uniqid();
@@ -32,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $message_body .= "\r\n" . $message . "\r\n";
   
   // Обработка прикрепленных файлов
-  if (isset($_FILES["user-files"])) {
+   if (! $_FILES) {
     $files = $_FILES["user-files"];
     
     // Добавление файлов к письму
@@ -50,7 +46,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $message_body .= chunk_split(base64_encode(file_get_contents($file_tmp))) . "\r\n";
     }
   }
-  
   // Завершение тела письма
   $message_body .= "--" . $boundary . "--";
   

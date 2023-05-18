@@ -60,11 +60,17 @@ Template Post Type: page
                 </p>
               </div>
               <div class="header__socials">
-                <a href="#">
-                  <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/icons/whatsap.svg" alt="" />
+                <a class="whatsapp-link" href="#">
+                     <svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.8947 0.0945015C13.0197 0.807781 6.99546 4.54606 3.33452 10.3726C-1.8561 18.6226 -0.885009 29.5281 5.67202 36.7125C9.30718 40.6914 13.8447 43.0719 19.2931 43.8453C20.3072 43.9914 23.6845 43.9828 24.7501 43.8453C29.7259 43.1578 34.1775 40.9492 37.5634 37.4945C38.6806 36.3601 38.9126 36.0937 39.6517 35.114C41.8517 32.1836 43.2869 28.6086 43.8455 24.707C43.9916 23.6929 43.9916 20.307 43.8455 19.2929C43.4759 16.689 42.797 14.4718 41.7228 12.2976C40.5712 9.9945 39.4025 8.3531 37.572 6.50544C34.1775 3.06794 29.9322 0.928093 25.0509 0.206219C23.9939 0.0515327 20.9431 -0.0172195 19.8947 0.0945015ZM25.3517 8.79138C33.0431 10.6218 37.4087 18.3906 34.9337 25.8328C34.2978 27.7578 33.2837 29.3648 31.7541 30.9031C29.8205 32.8453 27.7322 33.9797 25.008 34.5554C24.2603 34.7187 23.8306 34.7531 22.5158 34.7531C20.3416 34.7617 18.9837 34.4781 17.0673 33.6359C16.5947 33.4297 16.1478 33.2578 16.0705 33.2578C16.0017 33.2578 14.4376 33.6617 12.59 34.1515C10.7509 34.6328 9.22983 35.0281 9.22124 35.0195C9.20405 35.0109 9.61655 33.4812 10.1236 31.625L11.0517 28.239L10.6478 27.414C9.73687 25.5664 9.33296 23.8047 9.33296 21.6562C9.34155 17.9781 10.6392 14.8586 13.2345 12.289C15.2712 10.2695 17.8494 9.01481 20.84 8.55935C20.9861 8.54216 21.8541 8.53357 22.7736 8.55075C24.2001 8.57653 24.5869 8.61091 25.3517 8.79138Z" />
+                    <path d="M21.5275 10.7594C17.3166 11.0602 13.4666 14.068 12.1174 18.1156C11.6877 19.4219 11.5674 20.1953 11.5674 21.6562C11.5674 23.882 11.9885 25.3687 13.2432 27.5516L13.4408 27.9125L12.908 29.8633C12.6158 30.9375 12.3838 31.8398 12.4096 31.857C12.4268 31.8742 13.3377 31.6508 14.4377 31.3672L16.44 30.8344L17.4799 31.3586C19.19 32.2094 20.6768 32.5703 22.5244 32.5703C27.1393 32.5703 31.3588 29.5281 32.8197 25.1281C33.258 23.7961 33.3697 23.1172 33.3697 21.6562C33.3697 20.6078 33.3268 20.1352 33.1807 19.4219C32.2439 15.0305 28.7893 11.6617 24.4064 10.8797C23.4697 10.7164 22.6018 10.682 21.5275 10.7594ZM18.9236 15.7523C19.1986 16.0617 20.3072 18.8031 20.2471 19.0352C20.2213 19.1383 19.9635 19.525 19.6799 19.9031C19.3963 20.2727 19.1643 20.6336 19.1643 20.7109C19.1643 20.8742 19.8518 21.8969 20.3846 22.5242C20.9604 23.2031 22.0518 24.0281 22.9713 24.5008C24.1314 25.0766 24.1916 25.0766 24.8533 24.2602C25.6783 23.2547 25.7557 23.1859 25.9791 23.2461C26.2369 23.3234 28.6947 24.475 28.9525 24.6383C29.1416 24.7586 29.1502 24.8102 29.1072 25.343C29.0814 25.6609 28.9955 26.082 28.9182 26.2797C28.7377 26.7266 28.0846 27.3281 27.4314 27.6461C26.976 27.8695 26.8643 27.8867 25.9103 27.8867C24.9564 27.8867 24.8189 27.8609 24.0627 27.5945C22.8166 27.1477 22.0432 26.7781 21.1064 26.1508C19.3018 24.9477 17.1619 22.5328 16.2854 20.7023C15.9072 19.9031 15.7869 19.3016 15.8299 18.3906C15.8729 17.5398 16.0877 16.9812 16.6549 16.2766C17.1189 15.7094 17.4283 15.5633 18.1588 15.5547C18.6658 15.5547 18.7689 15.5805 18.9236 15.7523Z" />
+                    </svg>
                 </a>
-                <a href="#">
-                  <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/icons/telegram.svg" alt="" />
+                <a class="telegram-link" href="#">
+                  <svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="22" cy="22" r="22" />
+                    <path d="M18.5021 25.6797L18.1673 30.5935C18.6463 30.5935 18.8537 30.3788 19.1025 30.121L21.3484 27.8814L26.002 31.4375C26.8555 31.9338 27.4568 31.6724 27.687 30.6182L30.7417 15.6829L30.7425 15.682C31.0132 14.3656 30.2862 13.8508 29.4547 14.1737L11.4997 21.3466C10.2743 21.8429 10.2929 22.5557 11.2914 22.8786L15.8818 24.3685L26.5443 17.4068C27.0461 17.0601 27.5023 17.2519 27.127 17.5987L18.5021 25.6797Z" fill="white"/>
+                    </svg>
                 </a>
               </div>
               <div class="header__tel">
@@ -204,9 +210,9 @@ Template Post Type: page
                       </h2>
                     </div>
                     <div class="action">
-                      <button class="main-btn transparent-btn">
+                      <a href="#callbackwidget" class="main-btn transparent-btn">
                         Оставить заявку
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -227,9 +233,9 @@ Template Post Type: page
                       </h2>
                     </div>
                     <div class="action">
-                      <button class="main-btn transparent-btn">
+                      <a href="#callbackwidget" class="main-btn transparent-btn">
                         Оставить заявку
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -247,9 +253,9 @@ Template Post Type: page
                       <h2>Lorem ipsum dolor sit amet.</h2>
                     </div>
                     <div class="action">
-                      <button class="main-btn transparent-btn">
+                      <a href="#callbackwidget" class="main-btn transparent-btn">
                         Оставить заявку
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -271,9 +277,9 @@ Template Post Type: page
                       </h2>
                     </div>
                     <div class="action">
-                      <button class="main-btn transparent-btn">
+                      <a href="#callbackwidget" class="main-btn transparent-btn">
                         Оставить заявку
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -651,7 +657,7 @@ Template Post Type: page
                 </ul>
               </div>
               <div class="feedback__form">
-              <form class="contact-form-name main-form" method="post" name="user-form-main">
+              <form action="<?php echo get_template_directory_uri() . '/form-handler.php' ?>" class="contact-form-name main-form" method="post" name="user-form-main">
                   <label class="form-input">
                     <span> Телефон </span>
                     <input required name="user-phone" placeholder="Введите номер телефона" type="tel" />
@@ -679,7 +685,7 @@ Template Post Type: page
                   </div>
                   <label class="file-add">
                     <p>Прикрепить файлы</p>
-                    <input name="user-files[]"  id="fileInput" type="file" multiple/>
+                    <input value="" name="user-files[]"  id="fileInput" type="file" multiple/>
                   </label>
                   <div class="filelist">
                   </div>
@@ -1189,9 +1195,9 @@ Template Post Type: page
                 <p>Не нашли ответ на свой вопрос? Спросите у менеджера!</p>
               </div>
               <div class="action">
-                <button class="main-btn transparent-btn">
-                  оставить заявку
-                </button>
+                <a href="#callbackwidget" class="main-btn transparent-btn">
+                        Оставить заявку
+                  </a>
               </div>
             </div>
           </div>
@@ -1308,7 +1314,7 @@ Template Post Type: page
               <span> Заказать звонок </span>
             </div>
             <div class="form">
-              <form method="post" name="formPopup" class="contact-form-name small-form">
+              <form action="<?php get_template_directory_uri() . '/form-handler.php' ?>" method="post" name="formPopup" class="contact-form-name small-form">
                 <label>
                   <input name="user-phone" placeholder="Введите номер телефона" type="tel" />
                   <span>Телефон</span>

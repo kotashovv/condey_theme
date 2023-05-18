@@ -88,8 +88,18 @@ body {
     color: var(--var-main-color);
 }
 
+.callbackkiller.cbk-phone.cbk-phone-text-none {
+    opacity: 0;
+    visibility: hidden;
+}
+.callbackkiller.cbk-phone.envy-not-scalling.callbackkiller-mobile {
+    opacity: 0;
+    visibility: hidden;
+}
 .main-btn {
         display: block;
+        text-align: center;
+        text-decoration: none;
         padding: 23px 40px;
         box-sizing: border-box;
         background-color: var(--var-accent-color);
@@ -102,18 +112,18 @@ body {
         cursor: pointer;
         transition: .35s ease;
     &.transparent-btn {
-        border: 1px solid var(--var-accent-color);
+        border: 1px solid #3EAEDA;
         background-color: #fff;
         color: var(--var-accent-color);
         &:hover {
-            background-color: var(--var-accent-color);
-        color: #fff;
+            background-color: #3EAEDA;
+            color: #fff;
         }
     }
     &:hover {
         outline: 1px solid var(--var-accent-color);
-        background-color: #fff;
-        color: var(--var-accent-color);
+        background: #3EAEDA;
+        color: #fff;
     }
     @media(max-width:920px) {
         font-size: 14px;
@@ -121,7 +131,7 @@ body {
     }
     @media(max-width:560px) {
         padding: 10px 17px;
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 
