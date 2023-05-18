@@ -651,7 +651,7 @@ Template Post Type: page
                 </ul>
               </div>
               <div class="feedback__form">
-              <form id="contact-form-name" method="post" name="user-form-main">
+              <form class="contact-form-name main-form" method="post" name="user-form-main">
                   <label class="form-input">
                     <span> Телефон </span>
                     <input required name="user-phone" placeholder="Введите номер телефона" type="tel" />
@@ -1289,6 +1289,9 @@ Template Post Type: page
           </div>
         </div>
       </footer>
+      <div class="notice">
+        
+      </div>
       <div class="popup">
         <div class="popup__body">
           <div class="popup__item popup1">
@@ -1305,13 +1308,13 @@ Template Post Type: page
               <span> Заказать звонок </span>
             </div>
             <div class="form">
-              <form>
+              <form method="post" name="formPopup" class="contact-form-name small-form">
                 <label>
-                  <input placeholder="Введите номер телефона" type="tel" />
+                  <input name="user-phone" placeholder="Введите номер телефона" type="tel" />
                   <span>Телефон</span>
                 </label>
                 <div class="action">
-                  <button class="main-btn">Заказать звонок</button>
+                  <button type="submit" class="main-btn">Заказать звонок</button>
                 </div>
               </form>
             </div>

@@ -1,22 +1,27 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+  // Почта
+  $admin_email = 'kotashov03@gmail.com';
+  $admin_name = 'Новая заявка с Кандеич';
+
   // Получение данных из формы
   $phone = $_POST["user-phone"];
   $comment = $_POST["quest"];
   $needs = isset($_POST["need"]) ? implode(", ", (array)$_POST["need"]) : "";
   
   // Параметры отправки письма
-  $to = "kotashov03@gmail.com";
-  $subject = "Новая заявка с формы";
+  $to = $admin_email;
+  $subject = $admin_name;
   $message = "Телефон: " . $phone . "\n\n";
   $message .= "Комментарий: " . $comment . "\n\n";
-  $message .= "Потребности: " . $needs . "\n\n";
+  $message .= "Необходимо: " . $needs . "\n\n";
   
   // Создание уникального границы для разделения данных
   $boundary = uniqid();
   
   // Определение заголовков письма с указанием типа контента для прикрепленных файлов
-  $headers = "From: WordPress Form <noreply@yourdomain.com>" . "\r\n";
+  $headers = "From: WordPress Form <info@kandeich.ru>" . "\r\n";
   $headers .= "Reply-To: " . $to . "\r\n";
   $headers .= "MIME-Version: 1.0\r\n";
   $headers .= "Content-Type: multipart/mixed; boundary=" . $boundary . "\r\n";
