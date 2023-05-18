@@ -87,7 +87,6 @@
                 padding-left: 38px;
                 display: block;
                 box-sizing: border-box;
-                background-image: url(assets/imgs/icons/mail-ico.svg);
                 background-size: 22px;
                 background-repeat: no-repeat;
                 background-position: top left;
@@ -102,6 +101,15 @@
                     margin-bottom: 10px;
                     font-weight: 700;
                 }
+            }
+            .mail-ico {
+                background-image: url(assets/imgs/icons/mail-ico.svg);
+            }
+            .map-ico {
+                background-image: url(assets/imgs/icons/map-ico.svg);
+            }
+            .work-ico {
+                background-image: url(assets/imgs/icons/work-ico.svg);
             }
             
             

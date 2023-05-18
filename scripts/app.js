@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', ()=>{
 
+	Fancybox.bind("[data-fancybox]", {
+	});
+
 	const withSublist = document.querySelectorAll('.with-sublist');
 	if (withSublist.length != 0) {
 		const sublists = document.querySelectorAll('.sublist-menu');
@@ -143,6 +146,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 		},
 		pagination: {
 			el: '.review-pagination',
+			dynamicBullets: true,
 		},
 		breakpoints: {
 			0: {
@@ -168,6 +172,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 		},
 		pagination: {
 			el: '.part-pagination',
+			dynamicBullets: true,
 		},
 		slidesPerView: 4,
 		spaceBetween: 30,
@@ -199,6 +204,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 		},
 		pagination: {
 			el: '.works-pagination',
+			dynamicBullets: true,
 		},
 
 		breakpoints: {
@@ -282,7 +288,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
 			nextEl: '.cert-nav .next-slide',
 		},
 		pagination: {
-			el: '.cert-pagination'
+			el: '.cert-pagination',
+			dynamicBullets: true,
 		},
         spaceBetween: 10,
         breakpoints:{

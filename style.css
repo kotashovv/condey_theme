@@ -4404,7 +4404,6 @@ body {
   display: block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-image: url(assets/imgs/icons/mail-ico.svg);
   background-size: 22px;
   background-repeat: no-repeat;
   background-position: top left;
@@ -4420,6 +4419,18 @@ body {
   margin: 0;
   margin-bottom: 10px;
   font-weight: 700;
+}
+
+.footer__col .info .mail-ico {
+  background-image: url(assets/imgs/icons/mail-ico.svg);
+}
+
+.footer__col .info .map-ico {
+  background-image: url(assets/imgs/icons/map-ico.svg);
+}
+
+.footer__col .info .work-ico {
+  background-image: url(assets/imgs/icons/work-ico.svg);
 }
 
 .footer__title {
