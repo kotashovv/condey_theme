@@ -6,46 +6,32 @@ Template Post Type: page
 ?>
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <?php wp_head(); ?>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><?php echo get_bloginfo('name') . ' / ' . get_the_title();?></title>
-  </head>
-  <body>
-  <div class="wrapper">
+
+<head>
+  <?php wp_head(); ?>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><?php echo get_bloginfo('name') . ' / ' . get_the_title(); ?></title>
+</head>
+
+<body>
+<div class="wrapper">
       <!-- header start -->
       <header class="header">
         <div class="header__row header__top">
           <div class="container">
             <div class="header__wrap">
               <nav class="header__nav">
-                <ul class="nav-list">
-                  <li>
-                    <a href="#"> О компании </a>
-                  </li>
-                  <li>
-                    <a href="#"> Наши работы </a>
-                  </li>
-                  <li>
-                    <a href="#"> Услуги </a>
-                  </li>
-                  <li>
-                    <a href="#"> Контакты </a>
-                  </li>
-                  <li class="with-sublist">
-                    <a href="#"> Цены </a>
-                    <ul class="sublist-menu">
-                      <li>
-                        <a href=""> Покупка </a>
-                      </li>
-                      <li>
-                        <a href=""> Установка </a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
+              <?php
+                wp_nav_menu( [
+                  'menu'            => 'nav-menu',
+                  'container'       => 'ul',
+                  'menu_class'      => 'nav-list',
+                  'echo'            => true,
+                  'fallback_cb'     => 'wp_page_menu',
+                ] );
+              ?>
               </nav>
               <div class="header__email">
                 <a href="mailto:info@kandeich.ru">info@kandeich.ru</a>
@@ -113,40 +99,25 @@ Template Post Type: page
                   Кондиционирование</a
                 >
                 <a href="#">
-                  <img class="rotate" src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/icons/air.svg" alt="" /> Вентиляция</a
+                  <img class="rotate" src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/icons/air.svg" alt="" />
+                  Вентиляция</a
                 >
               </div>
               <nav class="header__nav">
-                <ul class="nav-list">
-                  <li>
-                    <a href="#"> О компании </a>
-                  </li>
-                  <li>
-                    <a href="#"> Наши работы </a>
-                  </li>
-                  <li>
-                    <a href="#"> Услуги </a>
-                  </li>
-                  <li>
-                    <a href="#"> Контакты </a>
-                  </li>
-                  <li class="with-sublist">
-                    <a href="#"> Цены </a>
-                    <ul class="sublist-menu">
-                      <li>
-                        <a href=""> Покупка </a>
-                      </li>
-                      <li>
-                        <a href=""> Установка </a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
+                <?php
+                  wp_nav_menu( [
+                    'menu'            => 'nav-menu',
+                    'container'       => 'ul',
+                    'menu_class'      => 'nav-list',
+                    'echo'            => true,
+                    'fallback_cb'     => 'wp_page_menu',
+                  ] );
+                ?>
               </nav>
             </div>
             <div class="mobile__nav">
               <div class="mobile__action">
-                <button  data-popup=".popup1" class="main-btn transparent-btn">
+                <button data-popup=".popup1" class="main-btn transparent-btn">
                   Заказать звонок
                 </button>
               </div>
@@ -173,31 +144,15 @@ Template Post Type: page
               <a href="#">Вентиляция</a>
             </div>
             <nav>
-              <ul class="nav-list">
-                <li>
-                  <a href="#"> О компании </a>
-                </li>
-                <li>
-                  <a href="#"> Наши работы </a>
-                </li>
-                <li>
-                  <a href="#"> Услуги </a>
-                </li>
-                <li>
-                  <a href="#"> Контакты </a>
-                </li>
-                <li class="with-sublist">
-                  <a href="#"> Цены </a>
-                  <ul class="sublist-menu">
-                    <li>
-                      <a href=""> Покупка </a>
-                    </li>
-                    <li>
-                      <a href=""> Установка </a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+            <?php
+                wp_nav_menu( [
+                  'menu'            => 'nav-menu',
+                  'container'       => 'ul',
+                  'menu_class'      => 'nav-list',
+                  'echo'            => true,
+                  'fallback_cb'     => 'wp_page_menu',
+                ] );
+              ?>
             </nav>
           </div>
           <div class="header__mobile-info">
@@ -209,15 +164,12 @@ Template Post Type: page
                 info@kandeich.ru
               </a>
               <span class="map-ico">
-                109382, г. Москва, вн.тер.г. мун. округ Люблино, ул Люблинская, д. 60 к. 2, помещ. С069
+                109382, г. Москва, вн.тер.г. мун. округ Люблино, ул Люблинская,
+                д. 60 к. 2, помещ. С069
               </span>
               <div class="work-info">
-                <p>
-                  Работаем в Москве и Московской области
-                </p>
-                <span>
-                  с 9.00 до 19.00 ПН-ПТ
-                </span>
+                <p>Работаем в Москве и Московской области</p>
+                <span> с 9.00 до 19.00 ПН-ПТ </span>
               </div>
             </div>
           </div>
@@ -392,7 +344,7 @@ Template Post Type: page
               </div>
               <div class="about__video">
                 <div class="video">
-                  <a href="#">
+                  <a data-fancybox="video" href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/sample-5s.mp4">
                     <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/video.png" alt="" />
                   </a>
                   <span class="video-title">
@@ -424,37 +376,76 @@ Template Post Type: page
               <div class="certification__slider swiper">
                 <div class="swiper-pagination cert-pagination"></div>
                 <div class="certification__slider-wrapper swiper-wrapper">
-                  <article class="certification__slider-slide swiper-slide">
+                  <a
+                    href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer1.png"
+                    data-fancybox="certification"
+                    class="certification__slider-slide swiper-slide"
+                  >
                     <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer1.png" alt="" />
-                  </article>
-                  <article class="certification__slider-slide swiper-slide">
+                  </a>
+                  <a
+                    href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer2.png"
+                    data-fancybox="certification"
+                    class="certification__slider-slide swiper-slide"
+                  >
                     <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer2.png" alt="" />
-                  </article>
-                  <article class="certification__slider-slide swiper-slide">
+                  </a>
+                  <a
+                    href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer3.png"
+                    data-fancybox="certification"
+                    class="certification__slider-slide swiper-slide"
+                  >
                     <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer3.png" alt="" />
-                  </article>
-                  <article class="certification__slider-slide swiper-slide">
+                  </a>
+                  <a
+                    href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer4.png"
+                    data-fancybox="certification"
+                    class="certification__slider-slide swiper-slide"
+                  >
                     <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer4.png" alt="" />
-                  </article>
-                  <article class="certification__slider-slide swiper-slide">
+                  </a>
+                  <a
+                    href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer5.png"
+                    data-fancybox="certification"
+                    class="certification__slider-slide swiper-slide"
+                  >
                     <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer5.png" alt="" />
-                  </article>
-                  <article class="certification__slider-slide swiper-slide">
+                  </a>
+                  <a
+                    href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer6.png"
+                    data-fancybox="certification"
+                    class="certification__slider-slide swiper-slide"
+                  >
                     <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer6.png" alt="" />
-                  </article>
-                  <article class="certification__slider-slide swiper-slide">
+                  </a>
+                  <a
+                    href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer7.png"
+                    data-fancybox="certification"
+                    class="certification__slider-slide swiper-slide"
+                  >
                     <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer7.png" alt="" />
-                  </article>
-                  <article class="certification__slider-slide swiper-slide">
+                  </a>
+                  <a
+                    href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer8.png"
+                    data-fancybox="certification"
+                    class="certification__slider-slide swiper-slide"
+                  >
                     <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer8.png" alt="" />
-                  </article>
-                  <article class="certification__slider-slide swiper-slide">
+                  </a>
+                  <a
+                    href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer9.png"
+                    data-fancybox="certification"
+                    class="certification__slider-slide swiper-slide"
+                  >
                     <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer9.png" alt="" />
-                  </article>
-                  <article class="certification__slider-slide swiper-slide">
+                  </a>
+                  <a
+                    href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer10.png"
+                    data-fancybox="certification"
+                    class="certification__slider-slide swiper-slide"
+                  >
                     <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer10.png" alt="" />
-                  </article>
-                  
+                  </a>
                 </div>
               </div>
             </div>
@@ -799,19 +790,44 @@ Template Post Type: page
               ></div>
               <div class="review__slider swiper">
                 <div class="review__slider-wrapper swiper-wrapper">
-                  <a class="review__slider-slide swiper-slide" href="#">
+                  <a
+                    data-fancybox="review"
+                    href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/sample-5s.mp4"
+                    class="review__slider-slide swiper-slide"
+                    href="#"
+                  >
                     <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/v1.png" alt="" />
                   </a>
-                  <a class="review__slider-slide swiper-slide" href="#">
+                  <a
+                    data-fancybox="review"
+                    href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/sample-5s.mp4"
+                    class="review__slider-slide swiper-slide"
+                    href="#"
+                  >
                     <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/v1.png" alt="" />
                   </a>
-                  <a class="review__slider-slide swiper-slide" href="#">
+                  <a
+                    data-fancybox="review"
+                    href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/sample-5s.mp4"
+                    class="review__slider-slide swiper-slide"
+                    href="#"
+                  >
                     <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/v1.png" alt="" />
                   </a>
-                  <a class="review__slider-slide swiper-slide" href="#">
+                  <a
+                    data-fancybox="review"
+                    href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/sample-5s.mp4"
+                    class="review__slider-slide swiper-slide"
+                    href="#"
+                  >
                     <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/v1.png" alt="" />
                   </a>
-                  <a class="review__slider-slide swiper-slide" href="#">
+                  <a
+                    data-fancybox="review"
+                    href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/sample-5s.mp4"
+                    class="review__slider-slide swiper-slide"
+                    href="#"
+                  >
                     <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/v1.png" alt="" />
                   </a>
                 </div>
@@ -936,13 +952,34 @@ Template Post Type: page
                     <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/p4.png" alt="" />
                   </article>
                   <article class="partners__slider-slide swiper-slide">
-                    <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/p2.png" alt="" />
+                    <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/p5.png" alt="" />
                   </article>
                   <article class="partners__slider-slide swiper-slide">
-                    <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/p3.png" alt="" />
+                    <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/p6.png" alt="" />
                   </article>
                   <article class="partners__slider-slide swiper-slide">
-                    <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/p4.png" alt="" />
+                    <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/p7.png" alt="" />
+                  </article>
+                  <article class="partners__slider-slide swiper-slide">
+                    <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/p8.png" alt="" />
+                  </article>
+                  <article class="partners__slider-slide swiper-slide">
+                    <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/p9.png" alt="" />
+                  </article>
+                  <article class="partners__slider-slide swiper-slide">
+                    <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/p10.png" alt="" />
+                  </article>
+                  <article class="partners__slider-slide swiper-slide">
+                    <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/p11.png" alt="" />
+                  </article>
+                  <article class="partners__slider-slide swiper-slide">
+                    <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/p12.png" alt="" />
+                  </article>
+                  <article class="partners__slider-slide swiper-slide">
+                    <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/p13.png" alt="" />
+                  </article>
+                  <article class="partners__slider-slide swiper-slide">
+                    <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/p14.png" alt="" />
                   </article>
                 </div>
               </div>
@@ -1047,13 +1084,17 @@ Template Post Type: page
                 </button>
                 <div class="text">
                   <p>
-                    Оборудование распологается за потолком в тех помещении, гардеробе или сан узле. В зависимости от модели и мощности оборудования опуск потолка варьируется от 200 до 400мм
-                    <br>
-                    <br>
-                    Опуск потолка в жилых зонах зависит от размера воздуховодов и выбора решеток и составляет 150-250мм
-                    <br>
-                    <br>
-                    Есть возможность не нарушать опуск потолка расположив решетки в стенах технических помещений смежных с жилыми.
+                    Оборудование распологается за потолком в тех помещении,
+                    гардеробе или сан узле. В зависимости от модели и мощности
+                    оборудования опуск потолка варьируется от 200 до 400мм
+                    <br />
+                    <br />
+                    Опуск потолка в жилых зонах зависит от размера воздуховодов
+                    и выбора решеток и составляет 150-250мм
+                    <br />
+                    <br />
+                    Есть возможность не нарушать опуск потолка расположив
+                    решетки в стенах технических помещений смежных с жилыми.
                   </p>
                 </div>
               </article>
@@ -1063,7 +1104,8 @@ Template Post Type: page
                 </button>
                 <div class="text">
                   <p>
-                    При правильном проектировании системы вентиляции и кондиционирования систему будет не слышно.
+                    При правильном проектировании системы вентиляции и
+                    кондиционирования систему будет не слышно.
                   </p>
                 </div>
               </article>
@@ -1073,7 +1115,12 @@ Template Post Type: page
                 </button>
                 <div class="text">
                   <p>
-                    Рассчитать систему без проектирования невозможно, поэтому мы сначала делаем бесплатную схему с расчетами для каждого объекта и согласовываем ее с заказчиком или дизайнером, после этого приступаем к расчету, с помощью компьютера, для избежания перерасходов и получения самой конкурентной стоимости. 
+                    Рассчитать систему без проектирования невозможно, поэтому мы
+                    сначала делаем бесплатную схему с расчетами для каждого
+                    объекта и согласовываем ее с заказчиком или дизайнером,
+                    после этого приступаем к расчету, с помощью компьютера, для
+                    избежания перерасходов и получения самой конкурентной
+                    стоимости.
                   </p>
                 </div>
               </article>
@@ -1083,16 +1130,23 @@ Template Post Type: page
                 </button>
                 <div class="text">
                   <p>
-                    "Проводить ТО систем вентиляции и кондиционирования рекомендуется 2 раза в год: перед запуском системы в весенний период, для работы на охлаждение и в осеннее время года, когда планируется использовать прибор на обогрев. Чистка фильтра зависит от времени использования систем кондиционирования и вентиляции. Варьируется от 2 до 6 месяцев.                                                                                                                                                                                                                         Преимущества ТО:
-                    <br><br>
+                    "Проводить ТО систем вентиляции и кондиционирования
+                    рекомендуется 2 раза в год: перед запуском системы в
+                    весенний период, для работы на охлаждение и в осеннее время
+                    года, когда планируется использовать прибор на обогрев.
+                    Чистка фильтра зависит от времени использования систем
+                    кондиционирования и вентиляции. Варьируется от 2 до 6
+                    месяцев. Преимущества ТО:
+                    <br /><br />
                     Обеспечивается эффективная работа оборудования.
-                    <br><br>
+                    <br /><br />
                     Предупреждение аварийных ситуаций.
-                    <br><br>
-                    Предотвращение появления в блоках системы болезнетворных микробов, плесени, грибковых образований и пыльных клещей.
-                    <br><br>
+                    <br /><br />
+                    Предотвращение появления в блоках системы болезнетворных
+                    микробов, плесени, грибковых образований и пыльных клещей.
+                    <br /><br />
                     Сокращение эксплуатационных расходов.
-                    <br><br>
+                    <br /><br />
                     Соблюдение гарантийных обязательств."
                   </p>
                 </div>
@@ -1103,10 +1157,22 @@ Template Post Type: page
                 </button>
                 <div class="text">
                   <p>
-                    "В стандартных системах вентиляции воздух подается в одинаковом объеме во все помещения. Регулировать можно только мощность всей системы, из-за чего повышаются эксплуатационные расходы. Так как потребность в вентиляции в каждом помещении индивидуальна и зависит от присутствия в нем людей, то намного удобнее управлять количеством подаваемого воздуха в определенное помещение или зону. Это возможно с применением VAV-системы (англ. Variable Air Volume) — системы вентиляции с переменным расходом воздуха, которая является энергосберегающей системой вентиляции, позволяющей сэкономить энергию без снижения уровня комфорта. 
-                    <br>
-                    <br>
-                      Вы можете плавно менять подачу воздуха в каждой зоне и полностью отключать вентиляцию там, где нет людей. Например в ночное время не подавать воздух в гостиную."
+                    "В стандартных системах вентиляции воздух подается в
+                    одинаковом объеме во все помещения. Регулировать можно
+                    только мощность всей системы, из-за чего повышаются
+                    эксплуатационные расходы. Так как потребность в вентиляции в
+                    каждом помещении индивидуальна и зависит от присутствия в
+                    нем людей, то намного удобнее управлять количеством
+                    подаваемого воздуха в определенное помещение или зону. Это
+                    возможно с применением VAV-системы (англ. Variable Air
+                    Volume) — системы вентиляции с переменным расходом воздуха,
+                    которая является энергосберегающей системой вентиляции,
+                    позволяющей сэкономить энергию без снижения уровня комфорта.
+                    <br />
+                    <br />
+                    Вы можете плавно менять подачу воздуха в каждой зоне и
+                    полностью отключать вентиляцию там, где нет людей. Например
+                    в ночное время не подавать воздух в гостиную."
                   </p>
                 </div>
               </article>
@@ -1157,36 +1223,24 @@ Template Post Type: page
                     Кондиционирование</a
                   >
                   <a href="#"
-                    ><img class="rotate" src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/icons/air.svg" alt="" />
+                    ><img
+                      class="rotate"
+                      src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/icons/air.svg"
+                      alt=""
+                    />
                     Вентиляция</a
                   >
                 </div>
                 <nav class="footer__nav">
-                  <ul>
-                    <li>
-                      <a href="#"> О компании </a>
-                    </li>
-                    <li>
-                      <a href="#"> Наши работы </a>
-                    </li>
-                    <li>
-                      <a href="#"> Услуги </a>
-                    </li>
-                    <li>
-                      <a href="#"> Контакты </a>
-                    </li>
-                    <li class="with-sublist">
-                      <a href="#"> Цены </a>
-                      <ul class="sublist-menu">
-                        <li>
-                          <a href=""> Покупка </a>
-                        </li>
-                        <li>
-                          <a href=""> Установка </a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
+                  <?php
+                    wp_nav_menu( [
+                      'menu'            => 'nav-menu',
+                      'container'       => 'ul',
+                      'menu_class'      => '',
+                      'echo'            => true,
+                      'fallback_cb'     => 'wp_page_menu',
+                    ] );
+                  ?>
                 </nav>
               </div>
             </div>
@@ -1224,7 +1278,12 @@ Template Post Type: page
             <span class="copy">© 2023 Кандеич | Все права защищены</span>
             <a href="#" class="conf">Политика конфиденциальности</a>
             <a href="#" class="conf">Пользовательское соглашение</a>
-            <a target="_blank" href="https://digital.int-net-partner.ru/" class="dev">Разработка и продвижение Int-Net-Partner</a>
+            <a
+              target="_blank"
+              href="https://digital.int-net-partner.ru/"
+              class="dev"
+              >Разработка и продвижение Int-Net-Partner</a
+            >
           </div>
         </div>
       </footer>
@@ -1233,27 +1292,20 @@ Template Post Type: page
           <div class="popup__item popup1">
             <div class="popup-notice">
               <div class="title">
-                <span>
-                  Ваша заявка отправлена
-                </span>
+                <span> Ваша заявка отправлена </span>
               </div>
               <div class="text">
-                <span>
-                  Наш менеджер свяжется с Вами в ближайшее время
-                </span>
+                <span> Наш менеджер свяжется с Вами в ближайшее время </span>
               </div>
             </div>
-            <button class="close-popup">
-            </button>
+            <button class="close-popup"></button>
             <div class="title">
-              <span>
-                Заказать звонок
-              </span>
+              <span> Заказать звонок </span>
             </div>
             <div class="form">
               <form>
                 <label>
-                  <input placeholder="Введите номер телефона" type="tel">
+                  <input placeholder="Введите номер телефона" type="tel" />
                   <span>Телефон</span>
                 </label>
                 <div class="action">
@@ -1265,6 +1317,7 @@ Template Post Type: page
         </div>
       </div>
     </div>
-  </body>
-  <?php wp_footer(); ?>
+</body>
+<?php wp_footer(); ?>
+
 </html>
