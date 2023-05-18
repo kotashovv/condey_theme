@@ -651,38 +651,40 @@ Template Post Type: page
                 </ul>
               </div>
               <div class="feedback__form">
-                <form>
+              <form id="contact-form-name" method="post" name="user-form-main">
                   <label class="form-input">
                     <span> Телефон </span>
-                    <input placeholder="Введите номер телефона" type="tel" />
+                    <input required name="user-phone" placeholder="Введите номер телефона" type="tel" />
                   </label>
                   <label class="form-input">
                     <span> Комментарий </span>
-                    <input placeholder="Опишите Ваш запрос" type="text" />
+                    <input name="quest" placeholder="Опишите Ваш запрос" type="text" />
                   </label>
                   <div class="checks">
                     <label>
-                      <input type="checkbox" />
+                      <input name="need" value="Проектирование" type="checkbox" />
                       <span></span>
                       <p>Проектирование</p>
                     </label>
                     <label>
-                      <input type="checkbox" />
+                      <input name="need" type="checkbox" />
                       <span></span>
                       <p>Обслуживание</p>
                     </label>
                     <label>
-                      <input type="checkbox" />
+                      <input name="need" type="checkbox" />
                       <span></span>
                       <p>Монтаж</p>
                     </label>
                   </div>
                   <label class="file-add">
                     <p>Прикрепить файлы</p>
-                    <input type="file" />
+                    <input name="user-files[]"  id="fileInput" type="file" multiple/>
                   </label>
+                  <div class="filelist">
+                  </div>
                   <div class="button">
-                    <button class="main-btn">Оставить заявку</button>
+                    <button type="submit" class="main-btn">Оставить заявку</button>
                   </div>
                 </form>
               </div>

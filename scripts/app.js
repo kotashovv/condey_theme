@@ -1,5 +1,85 @@
 document.addEventListener('DOMContentLoaded', ()=>{
 
+	document.getElementById("contact-form-name").addEventListener("submit", function(event) {
+		event.preventDefault();
+		// Создание объекта FormData для сбора данных формы
+		var formData = new FormData(this);
+		// Отправка данных формы через AJAX
+		var xhr = new XMLHttpRequest();
+		xhr.open("POST", "../wp-content/themes/condey_theme/form-handler.php", true);
+		xhr.onload = function() {
+		  if (xhr.status === 200) {
+			// Вывод результата отправки формы
+			console.log(xhr.responseText);
+			// Дополнительные действия по успешной отправке формы
+		  }
+		};
+		xhr.send(formData);
+	  });
+
+	var inputFile = document.getElementById('fileInput');
+
+	if (inputFile) {
+		inputFile.addEventListener('change', ()=>{
+			showFileNames();
+		})
+	}
+	function removeFile(index) {
+		var input = document.getElementById('fileInput');
+		var files = Array.from(input.files);
+		files.splice(index, 1);
+	  
+		var newFileList = new DataTransfer();
+		for (var i = 0; i < files.length; i++) {
+		  newFileList.items.add(files[i]);
+		}
+	  
+		input.files = newFileList.files;
+		showFileNames(); // Обновляем список файлов после удаления
+	  }
+	  
+	function showFileNames() {
+		
+		var files = inputFile.files;
+		var fileList = document.querySelector('.filelist');
+
+		fileList.innerHTML =  '';
+
+		for (var i = 0; i < files.length; i++) {
+			var file = files[i];
+			var fileName = file.name;
+		
+			// Создаем контейнер для названия файла и кнопки удаления
+			var fileContainer = document.createElement('div');
+		
+			// Создаем элемент для названия файла
+			var fileItem = document.createElement('p');
+			fileItem.innerHTML = fileName;
+		
+			// Создаем кнопку удаления файла
+			var deleteButton = document.createElement('button');
+			
+			deleteButton.innerHTML = "";
+			deleteButton.setAttribute('data-file', i); // Устанавливаем атрибут для идентификации файла
+		
+			// Добавляем обработчик события на кнопку удаления
+			deleteButton.addEventListener('click', function(event) {
+				event.preventDefault();
+			  var fileIndex = event.target.getAttribute('data-file');
+			  removeFile(fileIndex);
+			});
+		
+			// Добавляем элементы в контейнер и контейнер в список файлов
+			fileContainer.appendChild(fileItem);
+			fileContainer.appendChild(deleteButton);
+			fileList.appendChild(fileContainer);
+		
+			// Выполняем дальнейшие операции с загруженным файлом
+			// Например, можно отправить файл на сервер с использованием AJAX
+			// или выполнить другие необходимые действия
+		  }
+	}
+
 	Fancybox.bind("[data-fancybox]", {
 	});
 

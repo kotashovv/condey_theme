@@ -3024,9 +3024,76 @@ body {
           flex-direction: column;
 }
 
+.feedback__form form .filelist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.feedback__form form .filelist > div {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.feedback__form form .filelist > div p {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--var-main-color);
+  margin-right: 5px;
+}
+
+.feedback__form form .filelist > div button {
+  position: relative;
+  width: 20px;
+  opacity: .5;
+  height: 20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.feedback__form form .filelist > div button::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background-color: var(--var-main-color);
+  width: 12px;
+  height: 1px;
+}
+
+.feedback__form form .filelist > div button::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  background-color: var(--var-main-color);
+  width: 12px;
+  height: 1px;
+}
+
 .feedback__form form label.file-add {
   position: relative;
-  margin-bottom: 40px;
 }
 
 .feedback__form form label.file-add p {
