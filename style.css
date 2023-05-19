@@ -439,16 +439,6 @@ body {
   color: var(--var-main-color);
 }
 
-.callbackkiller.cbk-phone.cbk-phone-text-none {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.callbackkiller.cbk-phone.envy-not-scalling.callbackkiller-mobile {
-  opacity: 0;
-  visibility: hidden;
-}
-
 .main-btn {
   display: block;
   text-align: center;
@@ -1135,6 +1125,13 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left center;
+  -webkit-transition: .35s ease;
+  -o-transition: .35s ease;
+  transition: .35s ease;
+}
+
+.header__email a:hover {
+  color: var(--var-accent-color);
 }
 
 .header__search {
@@ -1323,7 +1320,7 @@ body {
 }
 
 .header__bottom .header__nav .nav-list a::before {
-  top: 35px;
+  top: 30px;
   background-color: #fff;
 }
 
@@ -1347,6 +1344,7 @@ body {
   margin-right: 60px;
   color: inherit;
   text-decoration: none;
+  position: relative;
 }
 
 .header__type a img {
@@ -1357,6 +1355,30 @@ body {
 
 .header__type a:last-child {
   margin-right: 0;
+}
+
+.header__type a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  top: 40px;
+  opacity: 0;
+  background-color: #fff;
+  -webkit-transition: .35s ease;
+  -o-transition: .35s ease;
+  transition: .35s ease;
+}
+
+@media (max-width: 1200px) {
+  .header__type a::before {
+    top: 30px;
+  }
+}
+
+.header__type a:hover::before {
+  opacity: 1;
 }
 
 .nav-list {
@@ -4638,6 +4660,15 @@ body {
   padding: 17px;
   width: 100%;
   background-color: transparent;
+  -webkit-transition: .35s ease;
+  -o-transition: .35s ease;
+  transition: .35s ease;
+  cursor: pointer;
+}
+
+.footer__col:nth-child(2) .action button:hover {
+  background-color: #fff;
+  color: var(--var-main-color);
 }
 
 .footer__col .socials {
@@ -4682,6 +4713,13 @@ body {
   font-weight: 700;
   line-height: 1.4;
   display: block;
+  -webkit-transition: .35s ease;
+  -o-transition: .35s ease;
+  transition: .35s ease;
+}
+
+.footer__col .phone a:hover {
+  opacity: .6;
 }
 
 .footer__col .info .mail-ico, .footer__col .info .map-ico, .footer__col .info .work-ico {
@@ -4698,6 +4736,9 @@ body {
   font-size: 16px;
   line-height: 1.4;
   margin-bottom: 20px;
+  -webkit-transition: .35s ease;
+  -o-transition: .35s ease;
+  transition: .35s ease;
 }
 
 .footer__col .info .mail-ico p, .footer__col .info .map-ico p, .footer__col .info .work-ico p {
@@ -4710,8 +4751,16 @@ body {
   background-image: url(assets/imgs/icons/mail-ico.svg);
 }
 
+.footer__col .info .mail-ico:hover {
+  opacity: .7;
+}
+
 .footer__col .info .map-ico {
   background-image: url(assets/imgs/icons/map-ico.svg);
+}
+
+.footer__col .info .map-ico:hover {
+  opacity: .7;
 }
 
 .footer__col .info .work-ico {
@@ -4782,6 +4831,13 @@ body {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 30px;
+  -webkit-transition: .35s ease;
+  -o-transition: .35s ease;
+  transition: .35s ease;
+}
+
+.footer__type a:hover {
+  opacity: .7;
 }
 
 .footer__type a:last-child {
@@ -4818,6 +4874,13 @@ body {
   color: #fff;
   font-size: 18px;
   line-height: 1.5;
+  -webkit-transition: .35s ease;
+  -o-transition: .35s ease;
+  transition: .35s ease;
+}
+
+.footer__nav ul li a:hover {
+  opacity: .7;
 }
 
 .footer__nav ul li ul {
@@ -4852,6 +4915,16 @@ body {
   height: 1px;
   position: absolute;
   background: #3C3A37;
+}
+
+.footer__bot a {
+  -webkit-transition: .35s ease;
+  -o-transition: .35s ease;
+  transition: .35s ease;
+}
+
+.footer__bot a:hover {
+  opacity: .6;
 }
 
 .footer__bot .copy {

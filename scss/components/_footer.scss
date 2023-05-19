@@ -50,6 +50,12 @@
                     padding: 17px;
                     width: 100%;
                     background-color: transparent;
+                    transition: .35s ease;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #fff;
+                        color: var(--var-main-color);
+                    }
                 }
             }
         }
@@ -83,6 +89,10 @@
                 font-weight: 700;
                 line-height: 1.4;
                 display: block;
+                transition: .35s ease;
+                &:hover {
+                    opacity: .6;
+                }
             }
         }
 
@@ -100,6 +110,7 @@
                 font-size: 16px;
                 line-height: 1.4;
                 margin-bottom: 20px;
+                transition: .35s ease;
                 p {
                     margin: 0;
                     margin-bottom: 10px;
@@ -108,9 +119,15 @@
             }
             .mail-ico {
                 background-image: url(assets/imgs/icons/mail-ico.svg);
+                &:hover {
+                    opacity: .7;
+                }
             }
             .map-ico {
                 background-image: url(assets/imgs/icons/map-ico.svg);
+                &:hover {
+                    opacity: .7;
+                }
             }
             .work-ico {
                 background-image: url(assets/imgs/icons/work-ico.svg);
@@ -182,6 +199,10 @@
             font-weight: 700;
             line-height: 1.2;
             margin-bottom: 30px;
+            transition: .35s ease;
+            &:hover {
+                opacity: .7;
+            }
             &:last-child {
                 margin-bottom: 0;
             }
@@ -212,6 +233,10 @@
                     color: #fff;
                     font-size: 18px;
                     line-height: 1.5;
+                    transition: .35s ease;
+                    &:hover {
+                        opacity: .7;
+                    }
                 }
                 ul {
                     display: none;
@@ -240,6 +265,12 @@
         justify-content: space-between;
         padding: 50px 0;
         box-sizing: border-box;
+        a {
+            transition: .35s ease;
+            &:hover {
+                opacity: .6;
+            }
+        }
         .copy {
             font-size: 14px;
             font-weight: 400;
@@ -388,6 +419,7 @@
             max-width: none;
             width: 100%;
             a {
+                
                 img {
                     display: none;
                 }
