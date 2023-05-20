@@ -1262,6 +1262,12 @@ button.go-top-btn svg path {
   text-decoration: none;
   color: inherit;
   margin-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header__socials a:last-child {
@@ -1316,6 +1322,13 @@ button.go-top-btn svg path {
   line-height: 1.3;
   color: inherit;
   text-decoration: none;
+  -webkit-transition: .35s ease;
+  -o-transition: .35s ease;
+  transition: .35s ease;
+}
+
+.header__tel a:hover {
+  color: var(--var-accent-color);
 }
 
 .header__tel span {
@@ -1860,7 +1873,7 @@ button.go-top-btn svg path {
 
 @media (max-width: 560px) {
   main.main {
-    margin-top: 170px;
+    margin-top: 120px;
   }
 }
 
@@ -4172,6 +4185,10 @@ button.go-top-btn svg path {
           justify-content: flex-end;
 }
 
+.works__slider-slide:hover .name svg {
+  opacity: 1;
+}
+
 .works__slider-slide .name {
   width: 100%;
   height: 120px;
@@ -4185,6 +4202,23 @@ button.go-top-btn svg path {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  padding-right: 80px;
+}
+
+.works__slider-slide .name svg {
+  position: absolute;
+  width: 45px;
+  height: 12px;
+  top: 50%;
+  right: 40px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 0;
+  -webkit-transition: .35s ease;
+  -o-transition: .35s ease;
+  transition: .35s ease;
 }
 
 .works__slider-slide .name span {
@@ -4205,6 +4239,11 @@ button.go-top-btn svg path {
   .works__slider-slide .name {
     padding: 10px 25px;
     height: 80px;
+    padding-right: 30px;
+  }
+  .works__slider-slide .name svg {
+    right: 10px;
+    width: 30px;
   }
   .works__slider-slide .name span {
     font-size: 20px;
@@ -4707,11 +4746,13 @@ button.go-top-btn svg path {
   margin-top: 40px;
 }
 
-.footer__col:nth-child(2) .action button {
+.footer__col:nth-child(2) .action a {
   text-decoration: none;
   color: #fff;
   border: 1px solid #fff;
   text-transform: uppercase;
+  text-align: center;
+  display: block;
   font-weight: 700;
   font-size: 16px;
   -webkit-box-sizing: border-box;
@@ -4725,7 +4766,7 @@ button.go-top-btn svg path {
   cursor: pointer;
 }
 
-.footer__col:nth-child(2) .action button:hover {
+.footer__col:nth-child(2) .action a:hover {
   background-color: #fff;
   color: var(--var-main-color);
 }
