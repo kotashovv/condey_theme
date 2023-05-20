@@ -182,6 +182,7 @@ Template Post Type: page
 
     <main class="main">
       <!-- главный баннер -->
+      <?php $hero_items = CFS()->get('hero_items'); ?>
       <section class="hero">
         <div class="hero__slider swiper">
           <div class="swiper-navigation hero-navigation">
@@ -194,84 +195,32 @@ Template Post Type: page
           </div>
           <div class="swiper-pagination hero-pagination"></div>
           <div class="hero__wrapper-slider swiper-wrapper">
-            <article style="background-image: url(<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/hero-back.png)" class="hero__slide swiper-slide">
+
+            <?php foreach ($hero_items as $hero_item) : ?>
+
+              <article style="background-image: url(<?php echo $hero_item['hero_back']; ?>)" class="hero__slide swiper-slide">
               <div class="container">
                 <div class="hero__slide-text">
                   <div class="text">
                     <h2>
-                      Если Вы ищете лучшее предложение по монтажу системы
-                      вентиляции в Москве, то Вы его нашли!
+                      <?php echo $hero_item['hero_text']; ?>
                     </h2>
                   </div>
                   <div class="action">
-                    <a href="#callbackwidget" class="main-btn transparent-btn">
-                      Оставить заявку
+                    <a href=" <?php echo $hero_item['btn_link']; ?>" class="main-btn transparent-btn">
+                    <?php echo $hero_item['btn_text']; ?>
                     </a>
                   </div>
                 </div>
               </div>
               <div class="hero__slide-img">
-                <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/hero-img.png" alt="" />
+                <img src="<?php echo $hero_item['hero_img']; ?>" alt="" />
               </div>
             </article>
-            <article style="background-image: url(<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/hero-back.png)" class="hero__slide swiper-slide">
-              <div class="container">
-                <div class="hero__slide-text">
-                  <div class="text">
-                    <h2>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Saepe, veniam.
-                    </h2>
-                  </div>
-                  <div class="action">
-                    <a href="#callbackwidget" class="main-btn transparent-btn">
-                      Оставить заявку
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="hero__slide-img">
-                <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/hero-img.png" alt="" />
-              </div>
-            </article>
-            <article style="background-image: url(<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/hero-back.png)" class="hero__slide swiper-slide">
-              <div class="container">
-                <div class="hero__slide-text">
-                  <div class="text">
-                    <h2>Lorem ipsum dolor sit amet.</h2>
-                  </div>
-                  <div class="action">
-                    <a href="#callbackwidget" class="main-btn transparent-btn">
-                      Оставить заявку
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="hero__slide-img">
-                <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/hero-img.png" alt="" />
-              </div>
-            </article>
-            <article style="background-image: url(<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/hero-back.png)" class="hero__slide swiper-slide">
-              <div class="container">
-                <div class="hero__slide-text">
-                  <div class="text">
-                    <h2>
-                      Lorem ipsum dolor, sit amet consectetur adipisicing
-                      elit. Recusandae animi aut pariatur voluptatibus velit
-                      laborum!
-                    </h2>
-                  </div>
-                  <div class="action">
-                    <a href="#callbackwidget" class="main-btn transparent-btn">
-                      Оставить заявку
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="hero__slide-img">
-                <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/hero-img.png" alt="" />
-              </div>
-            </article>
+             
+            <?php
+            endforeach;
+            ?>
           </div>
         </div>
       </section>
@@ -347,59 +296,48 @@ Template Post Type: page
       </section>
       <!-- блок о нас -->
 
-      <!-- сертификаты -->
-      <section class="certification">
-        <div class="container big-container">
-          <div class="certification__title alt-title">
-            <h3>Наши сертификаты</h3>
-          </div>
-          <div class="certification__wrap">
-            <div class="cert-nav navigation">
-              <button class="prev-slide">
-                <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/icons/vector-black.svg" alt="" />
-              </button>
-              <button class="next-slide">
-                <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/icons/vector-black.svg" alt="" />
-              </button>
+      <?php $cert_items = CFS()->get('cert_items'); ?>
+
+      <?php if (isset($cert_items)) {
+      ?>
+        <section class="certification">
+          <div class="container big-container">
+            <div class="certification__title alt-title">
+              <h3>Наши сертификаты</h3>
             </div>
-            <div class="certification__slider swiper">
-              <div class="swiper-pagination cert-pagination"></div>
-              <div class="certification__slider-wrapper swiper-wrapper">
-                <a href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer1.png" data-fancybox="certification" class="certification__slider-slide swiper-slide">
-                  <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer1.png" alt="" />
-                </a>
-                <a href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer2.png" data-fancybox="certification" class="certification__slider-slide swiper-slide">
-                  <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer2.png" alt="" />
-                </a>
-                <a href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer3.png" data-fancybox="certification" class="certification__slider-slide swiper-slide">
-                  <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer3.png" alt="" />
-                </a>
-                <a href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer4.png" data-fancybox="certification" class="certification__slider-slide swiper-slide">
-                  <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer4.png" alt="" />
-                </a>
-                <a href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer5.png" data-fancybox="certification" class="certification__slider-slide swiper-slide">
-                  <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer5.png" alt="" />
-                </a>
-                <a href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer6.png" data-fancybox="certification" class="certification__slider-slide swiper-slide">
-                  <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer6.png" alt="" />
-                </a>
-                <a href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer7.png" data-fancybox="certification" class="certification__slider-slide swiper-slide">
-                  <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer7.png" alt="" />
-                </a>
-                <a href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer8.png" data-fancybox="certification" class="certification__slider-slide swiper-slide">
-                  <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer8.png" alt="" />
-                </a>
-                <a href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer9.png" data-fancybox="certification" class="certification__slider-slide swiper-slide">
-                  <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer9.png" alt="" />
-                </a>
-                <a href="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer10.png" data-fancybox="certification" class="certification__slider-slide swiper-slide">
-                  <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/cer10.png" alt="" />
-                </a>
+            <div class="certification__wrap">
+              <div class="cert-nav navigation">
+                <button class="prev-slide">
+                  <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/icons/vector-black.svg" alt="" />
+                </button>
+                <button class="next-slide">
+                  <img src="<?php echo get_template_directory_uri() . '/'; ?>assets/imgs/icons/vector-black.svg" alt="" />
+                </button>
+              </div>
+              <div class="certification__slider swiper">
+                <div class="swiper-pagination cert-pagination"></div>
+                <div class="certification__slider-wrapper swiper-wrapper">
+
+                  <?php foreach ($cert_items as $cert_item) : ?>
+
+                    <a href="<?php echo $cert_item['cert_img'] ?>" data-fancybox="certification" class="certification__slider-slide swiper-slide">
+                      <img src="<?php echo $cert_item['cert_img'] ?>" alt="" />
+                    </a>
+
+                  <?php
+                  endforeach;
+                  ?>
+
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+      <?php
+      } ?>
+      <!-- сертификаты -->
+
       <!-- сертификаты -->
 
       <!-- тип продукции 1 -->
@@ -784,19 +722,19 @@ Template Post Type: page
                 <div class="works__slider-wrapper swiper-wrapper">
                   <?php foreach ($works_items as $work_item) : ?>
 
-                  <a data-fancybox="works" style="background-image: url(<?php echo $work_item['work_img']; ?>)" class="works__slider-slide swiper-slide" href="<?php echo $work_item['work_img']; ?>">
-                    <div class="name">
-                    <svg width="46" height="14" viewBox="0 0 46 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M45 7L39 1M45 7L39 13M45 7H0" stroke="white"/>
-                      </svg>
-                      <span> <?php echo $work_item['work_name']; ?> </span>
-                    </div>
-                  </a>
+                    <a data-fancybox="works" style="background-image: url(<?php echo $work_item['work_img']; ?>)" class="works__slider-slide swiper-slide" href="<?php echo $work_item['work_img']; ?>">
+                      <div class="name">
+                        <svg width="46" height="14" viewBox="0 0 46 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M45 7L39 1M45 7L39 13M45 7H0" stroke="white" />
+                        </svg>
+                        <span> <?php echo $work_item['work_name']; ?> </span>
+                      </div>
+                    </a>
 
                   <?php
                   endforeach;
                   ?>
-                  
+
                 </div>
               </div>
             </div>
