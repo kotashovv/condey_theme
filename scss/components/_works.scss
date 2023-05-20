@@ -55,7 +55,15 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        &:hover {
+            .name {
+                svg {
+                    opacity: 1;
+                }
+            }
+        }
         .name {
+            
             width: 100%;
             height: 120px;
             background: #45c1f2d5;
@@ -63,6 +71,18 @@
             box-sizing: border-box;
             padding: 10px 40px;
             align-items: center;
+            position: relative;
+            padding-right: 80px;
+            svg {
+                position: absolute;
+                width: 45px;
+                height: 12px;
+                top: 50%;
+                right: 40px;
+                transform: translateY(-50%);
+                opacity: 0;
+                transition: .35s ease;
+            }
             span {
                 display: block;
                 font-weight: 700;
@@ -82,6 +102,11 @@
             .name {
                 padding: 10px 25px;
                 height: 80px;
+                padding-right: 30px;
+                svg {
+                    right: 10px;
+                    width: 30px;
+                }
                 span {
                     font-size: 20px;
                 }
