@@ -1,8 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-		const header = document.querySelector('header');
+	const goTopBtn = document.querySelector('.go-top-btn');
+	function goTopBtnVision() {
+		if(window.pageYOffset > 500) {
+			goTopBtn.classList.add('vision');
+		} else {
+			goTopBtn.classList.remove('vision');
+		}
+	}
+	if (goTopBtn) {
+		goTopBtn.addEventListener('click', ()=>{
+			window.scrollTo({
+				top: 0,
+				behavior: 'smooth'
+			  });
+		})
+		
+		window.addEventListener('scroll', goTopBtnVision);
+	}
 
-		function handleScroll() {
+	const header = document.querySelector('header');
+
+	function handleScroll() {
 		// if (window.pageYOffset > header.scrollHeight - document.querySelector('.header__bottom').scrollHeight) {
 		if (window.pageYOffset > 250) {
 			document.querySelector('.header__bottom').classList.add('vission');
@@ -11,9 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
 			document.querySelector('.header__bottom').classList.remove('vission');
 			header.style.marginBottom = 0;
 		}
-		}
+	}
 
-		window.addEventListener('scroll', handleScroll);
+	window.addEventListener('scroll', handleScroll);
 
 
 	function NoticeForm(text) {
