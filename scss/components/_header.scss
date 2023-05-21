@@ -689,6 +689,14 @@ main.main {
 @media(max-width:767px) {
    
     .header {
+        &.mobile-hide {
+            .header__middle {
+                display: none;
+            }
+            .header__mobile {
+                max-height: calc(100vh - 70px);
+            }
+        }
         z-index: 1000;
         position: fixed;
         top: 0;

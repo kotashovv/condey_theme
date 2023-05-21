@@ -4,7 +4,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Получение данных из формы
   $phone = $_POST["user-phone"];
   $comment = $_POST["quest"];
-  $needs = isset($_POST["need"]) ? implode(", ", (array)$_POST["need"]) : "";
+  if (isset($_POST['need'])) {
+    $needs = implode(', ', $_POST['need']);
+  }
+  
   
   // Параметры отправки письма
   $to = "info@kandeich.ru";

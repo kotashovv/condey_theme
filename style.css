@@ -1885,6 +1885,12 @@ button.go-top-btn svg path {
     left: 0;
     width: 100%;
   }
+  .header.mobile-hide .header__middle {
+    display: none;
+  }
+  .header.mobile-hide .header__mobile {
+    max-height: calc(100vh - 70px);
+  }
   .header .mobile__btn {
     margin-left: 15px;
   }
@@ -3502,6 +3508,7 @@ button.go-top-btn svg path {
 
 .feedback__form form .checks label {
   position: relative;
+  cursor: pointer;
   padding-left: 37px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -3537,7 +3544,7 @@ button.go-top-btn svg path {
   transition: .35s ease;
 }
 
-.feedback__form form .checks label p {
+.feedback__form form .checks label div {
   margin: 0;
   font-size: 16px;
   display: block;
@@ -3651,7 +3658,7 @@ button.go-top-btn svg path {
     width: 19px;
     height: 19px;
   }
-  .feedback__form form .checks label p {
+  .feedback__form form .checks label div {
     font-size: 14px;
   }
 }
@@ -4198,6 +4205,10 @@ button.go-top-btn svg path {
   opacity: 1;
 }
 
+.works__slider-slide .img img.hide {
+  display: none;
+}
+
 .works__slider-slide .name {
   width: 100%;
   height: 120px;
@@ -4701,7 +4712,7 @@ button.go-top-btn svg path {
 }
 
 .footer__top {
-  padding: 120px 0 200px;
+  padding: 120px 0 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

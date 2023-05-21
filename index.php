@@ -720,14 +720,22 @@ Template Post Type: page
               <div class="swiper-pagination works-pagination standart-pagination"></div>
               <div class="works__slider swiper">
                 <div class="works__slider-wrapper swiper-wrapper">
+                  <?php $work_id = 1; ?>
                   <?php foreach ($works_items as $work_item) : ?>
-
-                    <a data-fancybox="works" style="background-image: url(<?php echo $work_item['work_img']; ?>)" class="works__slider-slide swiper-slide" href="<?php echo $work_item['work_img']; ?>">
+                    <?php $work_id = $work_id + 1; ?>
+                    <a data-fancybox="<?php echo 'work_img' . $work_id; ?>" style="background-image: url(<?php echo $work_item['work_img']; ?>)" class="works__slider-slide swiper-slide" href="<?php echo $work_item['work_img']; ?>">
                       <div class="name">
                         <svg width="46" height="14" viewBox="0 0 46 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M45 7L39 1M45 7L39 13M45 7H0" stroke="white" />
                         </svg>
                         <span> <?php echo $work_item['work_name']; ?> </span>
+                      </div>
+                      <div class="img">
+                        <?php foreach($work_item['work_inside'] as $work_img) {
+                          ?>
+                            <img class="hide" data-fancybox="<?php echo 'work_img' . $work_id; ?>" src="<?php echo $work_img['img-link']; ?>" alt="">
+                          <?php
+                        } ?>
                       </div>
                     </a>
 

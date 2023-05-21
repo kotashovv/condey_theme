@@ -228,6 +228,7 @@
                 align-items: center;
                 label {
                     position: relative;
+                    cursor: pointer;
                     padding-left: 37px;
                     box-sizing: border-box;
                     margin-right: 35px;
@@ -255,7 +256,7 @@
                         opacity: 0;
                         transition: .35s ease;
                     }
-                    p {
+                    div {
                         margin: 0;
                         font-size: 16px;
                         display: block;
@@ -384,7 +385,7 @@
                             width: 19px;
                             height: 19px;
                         }
-                        p {
+                        div {
                             font-size: 14px;
                         }
                     }
