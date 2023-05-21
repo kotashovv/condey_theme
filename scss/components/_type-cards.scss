@@ -148,6 +148,13 @@
         }
     }
 }
+@media(max-width:768px) {
+    .prods {
+        &__item-desc {
+            overflow-y: scroll;
+        }
+    }
+}
 @media(max-width:560px) {
     .prods {
         &__items {

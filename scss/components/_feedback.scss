@@ -373,6 +373,8 @@
                 }
                 .checks {
                     label {
+                        box-sizing: border-box;
+                        width: calc(50% - 20px);
                         padding-left: 27px;
                         &::before {
                             width: 17px;
